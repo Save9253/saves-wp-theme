@@ -1,7 +1,9 @@
 <?php
 
+get_header();
+
 echo "<h2>Test</h2>";
-print_r();#shows what it does
+#print_r();#shows what it does
 echo "<hr/>";
 
 #Page Conetent
@@ -24,5 +26,7 @@ if(have_posts()){
         echo "<br/>";
     }
 }
+
+get_footer();
 
 ?>
