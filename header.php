@@ -9,4 +9,5 @@
 <body <?php body_class();?>>
 <header>
     <h1>This is header</h1>
+    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );?>
 </header>
