@@ -9,5 +9,8 @@
 <body <?php body_class();?>>
 <header>
     <h1>This is header</h1>
-    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );?>
+    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
+          echo "<br/>";
+          print_r(get_search_form( $echo ));
+    ?>
 </header>
