@@ -1,0 +1,11 @@
+:root{
+    /*colors*/
+    --prpl:#872d51;
+    --rd:#e15369;
+    --orng:#ef887a;
+    --bl:#9796cf;
+    --blk:#15120b;
+}
+body{
+    background-color: var(--blk);
+}
