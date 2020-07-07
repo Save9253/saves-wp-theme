@@ -1,5 +1,5 @@
 <?php
-
+$AllPosts = get_posts();
 get_header();
 
 echo "<h2>Test</h2>";
@@ -17,14 +17,14 @@ if ( have_posts() ) {
 };
 
 #Blog
-$AllPosts = get_posts();
+
 echo "<h1>Here should be the posts</h1>";
 if(have_posts()){
     for($i = 0, $size = count($AllPosts); $i < $size; $i++){
         echo "<h1>";
-        echo apply_filters( 'the_title', $AllPosts[$i]->post_title);
+        echo $AllPosts[$i]->post_title;
         echo "</h1>";
-        echo apply_filters( 'the_content', $AllPosts[$i]->post_content );
+        echo $AllPosts[$i]->post_content;
         echo "<br/>";
     }
 }
