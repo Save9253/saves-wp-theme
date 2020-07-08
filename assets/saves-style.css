@@ -69,6 +69,9 @@ header{
     justify-content: end;
     align-items:center;
 }
+#mnSrch form{
+    margin-left: 10px;
+}
 #menu-primary{
     margin:0;
 }
@@ -102,7 +105,7 @@ header{
 #s{
     background: transparent;
     border-bottom-style:solid;
-    border-bottom-width: 1.5px;
+    border-bottom-width: 1px;
     border-color: var(--orng);
     color: var(--orng);
     outline:none;
@@ -118,6 +121,10 @@ header{
 #srchBtn{
     background-color: transparent;
     border: none;
+    position: relative;
+}
+#srchBtn:hover{
+    bottom:3px;
 }
 #srchSVG{
     height: 18px;
