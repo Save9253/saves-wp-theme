@@ -1,7 +1,5 @@
-<?php
+<?php get_header();?>
 
-get_header();
+<div id="bckgr"></div>
 
-get_footer();
-
-?>
+<?php get_footer();?>

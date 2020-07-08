@@ -7,7 +7,6 @@
     --blk:#15120b;
 }
 body{
-    background-color: var(--orng);
     font-family: 'Mukta' , fallback, Helvetica, sans-serif;
     margin:0;
 }
@@ -31,6 +30,22 @@ a{
 input[type=text]{
     border-style: none;
     font-family: 'Mukta' , fallback, Helvetica, sans-serif;
+}
+#bckgr{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+    width:100vw;
+    height:100vh;
+    background: linear-gradient(#EF887E,#e15369,#872d51,#9796CD ,#EF887E,#e15369,#872d51,#9796CD);
+    background-size: 100% 400%;
+    background-position-y: 0%;
+    animation: bckclr linear 20s infinite;
+}
+@keyframes bckclr{
+    0%{background-position-y: 0%;}
+    100%{background-position-y: 75%;}
 }
 
 /* Header */
@@ -64,25 +79,35 @@ header{
     font-size: 20px;
 }
 #menu-primary a{
-    color: var(--rd);
+    color: var(--orng);
+    animation: clrs 20s linear infinite;
     transition: 1s ease;
 }
+@keyframes clrs {
+    0%{color:#EF887E; border-color:#EF887E }
+    25%{color:#e15369; border-color:#e15369}
+    50%{color:#872d51; border-color:#872d51}
+    75%{color:#9796CD; border-color:#9796CD}
+    100%{color:#EF887E; border-color:#EF887E}
+}
+
 #menu-primary a:hover{
-    color: white;
+    font-weight: bold;
 }
 #s{
     background: transparent;
-    border-bottom: solid 1px var(--rd);
-    color: var(--rd);
+    border-bottom-width: 1.5px;
+    border-color: var(--orng);
+    color: var(--orng);
     outline:none;
     font-size: 16px;
     padding: 3px 0;
     line-height: 1.2em;
     transition: 1s ease;
+    animation: clrs 20s linear infinite;
 }
 #s:focus,#s:hover{
-    border-bottom: solid 1px white;
-    color:white;
+    border-bottom-width: 2px;
 }
 #srchBtn{
     background-color: transparent;
@@ -93,7 +118,15 @@ header{
     width: auto;
     padding-top: 5px;
     transition: 1s ease;
+    animation: fll 20s linear infinite;
 }
 #srchSVG:hover{
     fill:white;
+}
+@keyframes fll {
+    0%{fill:#EF887E}
+    25%{fill:#e15369}
+    50%{fill:#872d51}
+    75%{fill:#9796CD}
+    100%{fill:#EF887E}
 }
