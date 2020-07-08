@@ -82,6 +82,7 @@ header{
     color: var(--orng);
     animation: clrs 20s linear infinite;
     transition: 1s ease;
+    position: relative;
 }
 @keyframes clrs {
     0%{color:#EF887E; border-color:#EF887E }
@@ -90,12 +91,17 @@ header{
     75%{color:#9796CD; border-color:#9796CD}
     100%{color:#EF887E; border-color:#EF887E}
 }
-
 #menu-primary a:hover{
-    font-weight: bold;
+    bottom:3px;
 }
+
+.current-menu-item{
+    text-decoration: overline;
+}
+
 #s{
     background: transparent;
+    border-bottom-style:solid;
     border-bottom-width: 1.5px;
     border-color: var(--orng);
     color: var(--orng);
