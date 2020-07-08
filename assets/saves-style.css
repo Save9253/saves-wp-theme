@@ -8,6 +8,7 @@
 }
 body{
     background-color: var(--blk);
+    font-family: 'Mukta' , fallback, Helvetica, sans-serif;
 }
 
 .cntr{
@@ -28,6 +29,7 @@ a{
 
 input[type=text]{
     border-style: none;
+    font-family: 'Mukta' , fallback, Helvetica, sans-serif;
 }
 
 /* Header */
@@ -43,7 +45,6 @@ input[type=text]{
 #menu-primary li{
     display: inline;
     text-transform: uppercase;
-    font-family: 'Mukta' , fallback, Helvetica, sans-serif;
     margin-right: 10px;
     font-size: 20px;
 }
@@ -52,9 +53,22 @@ input[type=text]{
     transition: 1s ease;
 }
 #menu-primary a:hover{
-    color: var(--orng);
+    color: white;
 }
-header form input[type=text]{
+#s{
     background: transparent;
     border-bottom: solid 1px var(--rd);
+    color: var(--rd);
+    outline:none;
+    font-size: 18px;
+    padding-bottom: 3px;
+    line-height: 1.2em;
+}
+#s:focus{
+    border-bottom: solid 1px white;
+    color:white;
+}
+#srchBtn{
+    background-color: transparent;
+    border: none;
 }

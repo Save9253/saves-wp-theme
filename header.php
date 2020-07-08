@@ -43,6 +43,6 @@
     </div>
     <div class="cntr">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );?>
-        <?php print_r(get_search_form( $echo ));?>
+        <?php get_search_form();?>
     <div>
 </header>
