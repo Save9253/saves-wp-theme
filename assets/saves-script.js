@@ -1,3 +1,4 @@
+//Search functioning
 const srchBtn = document.querySelector('#srchBtn');
 const srchFld = document.querySelector('#s');
 srchBtn.addEventListener('click',() => {
@@ -9,5 +10,17 @@ srchBtn.addEventListener('click',() => {
         };
     } else {
         srchBtn.type = "submit";
+    }
+});
+
+//LogoShrink
+const logo = document.querySelector('#logo');
+addEventListener('scroll',() => {
+    if(window.scrollY != 0){
+        logo.classList.add('logoShrink');
+        console.log('not 0')
+    } else {
+        logo.classList.remove('logoShrink');
+        console.log('0')
     }
 });
