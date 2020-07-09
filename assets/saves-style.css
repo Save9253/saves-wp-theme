@@ -84,8 +84,9 @@ header{
 #menu-primary a{
     color: var(--orng);
     animation: clrs 20s linear infinite;
-    transition: 1s ease;
+    transition: 500ms ease;
     position: relative;
+    bottom:0px;
 }
 @keyframes clrs {
     0%{color:#EF887E; border-color:#EF887E }
@@ -122,6 +123,9 @@ header{
     background-color: transparent;
     border: none;
     position: relative;
+    bottom:0px;
+    outline:none;
+    transition: 500ms ease;
 }
 #srchBtn:hover{
     bottom:3px;
@@ -133,9 +137,7 @@ header{
     transition: 1s ease;
     animation: fll 20s linear infinite;
 }
-#srchSVG:hover{
-    fill:white;
-}
+
 @keyframes fll {
     0%{fill:#EF887E}
     25%{fill:#e15369}
