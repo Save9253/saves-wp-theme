@@ -7,6 +7,7 @@
     <?php wp_head();?>
 </head>
 <body <?php body_class();?>>
+<div id="bckgr"></div>
 <header>
     <a id="logoLink" href="<?php echo home_url( '/' );?>">
         <svg id="logo" width="301" transform="scale" height="118" viewBox="0 0 301 118" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,4 +47,3 @@
         <?php get_search_form();?>
     </div>
 </header>
-<div id="bckgr"></div>
