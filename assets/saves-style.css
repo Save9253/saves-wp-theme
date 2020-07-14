@@ -87,7 +87,7 @@ header{
 }
 #menu-primary a{
     color: var(--orng);
-    animation: clrs 20s linear infinite;
+    animation: clrs 20s -1s linear infinite;
     transition: 500ms ease;
     position: relative;
     bottom:0px;
@@ -113,7 +113,7 @@ header{
     padding: 3px 0;
     line-height: 1.2em;
     transition: 1s ease;
-    animation: clrs 20s linear infinite;
+    animation: clrs 20s -1s linear infinite;
 }
 #s:focus,#s:hover{border-bottom-width: 2px;}
 #srchBtn{
@@ -130,7 +130,7 @@ header{
     width: auto;
     padding-top: 5px;
     transition: 1s ease;
-    animation: fll 20s linear infinite;
+    animation: fll 20s -1s linear infinite;
 }
 @keyframes fll {
     0%{fill:#EF887E}
@@ -143,11 +143,11 @@ header{
 /* Top Grid */
 #topGrid{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%);
     grid-gap: 5px;
-    width:100vw;
-    height:100vh;
+    width: calc(100vw - 15px);
+    height: calc(100vh - 20px);
     padding:5px;
 }
 
@@ -156,6 +156,9 @@ header{
     width:100%;
     height: 100%;
     color:white;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
 #GH{grid-column: 1/2; grid-row:1/3;}
 #Gi1{grid-column: 1/2; grid-row:3/6;}

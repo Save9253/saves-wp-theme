@@ -9,18 +9,27 @@
 <body <?php body_class();?>>
 <?php
     $pds = wc_get_products( $args );
+    $a = 0;
+    $b = 1;
+    $c = 2;
+    $d = 3;
+    $e = 4;
+    $f = 5;
+    $g = 6;
+    $h = 7;
 ?>
 <div id="bckgr"></div>
 <section id="topGrid">
-    <div id="Gi1" class="topGridi">
-        <h1><?php echo $pds[0]->name ?></h1>
-        <p><?php echo $pds[0]->short_description ?></p>
-        <p>Price:<?php echo $pds[0]->price?>, Regular price:<?php echo $pds[0]->regular_price?>, Discounted price: <?php echo $pds[0]->regular_price?></p>
-        <img src="<?php echo wp_get_attachment_url($pds[0]->image_id)?>" alt="<?php echo $pds[0]->name ?>" width="100px" height="100px">
-        <img src="<?php echo wp_get_attachment_url($pds[0]->gallery_image_ids[0])?>" alt="<?php echo $pds[0]->name ?>" width="100px" height="100px">
-        <img src="<?php echo wp_get_attachment_url($pds[0]->gallery_image_ids[1])?>" alt="<?php echo $pds[0]->name ?>" width="100px" height="100px">
+    <div id="Gi1" class="topGridi" style="background-image:url(<?php echo wp_get_attachment_url($pds[$a]->image_id)?>)">
+        <h1><?php echo $pds[$a]->name ?></h1>
+        <p><?php echo $pds[$a]->short_description ?></p>
+        <p>Price:<?php echo $pds[$a]->price?>, Regular price:<?php echo $pds[$a]->regular_price?>, Discounted price: <?php echo $pds[$a]->regular_price?></p>
     </div>
-    <div id="Gi2" class="topGridi"></div>
+    <div id="Gi2" class="topGridi" style="background-image:url(<?php echo wp_get_attachment_url($pds[$b]->image_id)?>)">
+        <h1><?php echo $pds[$b]->name ?></h1>
+        <p><?php echo $pds[$b]->short_description ?></p>
+        <p>Price:<?php echo $pds[$b]->price?>, Regular price:<?php echo $pds[$b]->regular_price?>, Discounted price: <?php echo $pds[$b]->regular_price?></p>
+    </div>
     <div id="Gi3" class="topGridi"></div>
     <div id="Gi4" class="topGridi"></div>
     <div id="Gi5" class="topGridi"></div>
