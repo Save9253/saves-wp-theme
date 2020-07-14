@@ -7,9 +7,19 @@
     <?php wp_head();?>
 </head>
 <body <?php body_class();?>>
+<?php
+    $pds = wc_get_products( $args );
+?>
 <div id="bckgr"></div>
 <section id="topGrid">
-    <div id="Gi1" class="topGridi"></div>
+    <div id="Gi1" class="topGridi">
+        <h1><?php echo $pds[0]->name ?></h1>
+        <p><?php echo $pds[0]->short_description ?></p>
+        <p>Price:<?php echo $pds[0]->price?>, Regular price:<?php echo $pds[0]->regular_price?>, Discounted price: <?php echo $pds[0]->regular_price?></p>
+        <img src="<?php echo wp_get_attachment_url($pds[0]->image_id)?>" alt="<?php echo $pds[0]->name ?>" width="100px" height="100px">
+        <img src="<?php echo wp_get_attachment_url($pds[0]->gallery_image_ids[0])?>" alt="<?php echo $pds[0]->name ?>" width="100px" height="100px">
+        <img src="<?php echo wp_get_attachment_url($pds[0]->gallery_image_ids[1])?>" alt="<?php echo $pds[0]->name ?>" width="100px" height="100px">
+    </div>
     <div id="Gi2" class="topGridi"></div>
     <div id="Gi3" class="topGridi"></div>
     <div id="Gi4" class="topGridi"></div>

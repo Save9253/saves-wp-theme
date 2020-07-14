@@ -1,7 +1,6 @@
 //Search functioning
 const srchBtn = document.querySelector('#srchBtn');
 const srchFld = document.querySelector('#s');
-const GH = document.querySelector('#GH');
 
 srchBtn.addEventListener('click',() => {
     if(srchFld.value == ""){
@@ -16,7 +15,7 @@ srchBtn.addEventListener('click',() => {
 });
 
 //LogoShrink
-const logo = document.querySelector('#logo');
+/*const logo = document.querySelector('#logo');
 addEventListener('scroll',() => {
     if(window.scrollY != 0){
         logo.classList.add('logoShrink');
@@ -24,3 +23,4 @@ addEventListener('scroll',() => {
         logo.classList.remove('logoShrink');
     }
 });
+*/
