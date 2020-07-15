@@ -128,7 +128,16 @@
         </div>
     </div>
     <div id="Gi7" class="topGridi WH">
-        <p>All the artworks are down there</p>
+        <p>
+            <?php
+                echo 'a '.$a;
+                echo '<br/>b '.$b;
+                echo '<br/>c '.$c;
+                echo '<br/>d '.$d;
+                echo '<br/>d '.$e;
+                echo '<br/>d '.$f;
+            ?>
+        </p>
     </div>
     <div id="GH" class="topGridi WH">
         <a id="logoLink" class="cntr" href="<?php echo home_url( '/' );?>">
