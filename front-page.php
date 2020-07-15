@@ -9,14 +9,19 @@
 <body <?php body_class();?>>
 <?php
     $pds = wc_get_products( $args );
-    $a = 0;
-    $b = 1;
-    $c = 2;
-    $d = 3;
-    $e = 4;
-    $f = 5;
-    $g = 6;
-    $h = 7;
+    $pdsC = count($pds) - 1;
+    $i = 0;
+    $a = $i;
+    if($i < $pdsC){$i++;} else {$i = 0;};
+    $b = $i;
+    if($i < $pdsC){$i++;} else {$i = 0;};
+    $c = $i;
+    if($i < $pdsC){$i++;} else {$i = 0;};
+    $d = $i;
+    if($i < $pdsC){$i++;} else {$i = 0;};
+    $e = $i;
+    if($i < $pdsC){$i++;} else {$i = 0;};
+    $f = $i;
 ?>
 <div id="bckgr"></div>
 <section id="topGrid">
@@ -56,19 +61,9 @@
     </div>
     <div id="Gi3" class="topGridi WH">
         <div class="GiCont WH">
-            <h1><?php echo $pds[$c]->name ?></h1>
-            <div class="GiDis Pr WH">
-                <p>
-                    <?php
-                        if($pds[$c]->price == $pds[$c]->regular_price):
-                            echo $pds[$c]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">'.$pds[$c]->regular_price.'</span>'." ".'<span class="newPrc">'.$pds[$c]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p><?php echo $pds[$c]->short_description ?></p>
-            </div>
+            <h1><?php echo count($pds);
+            echo "<br/>variables:<br/>a=".$a."<br/>b=".$b."<br/>c=".$c."<br/>d=".$d."<br/>e=".$e."<br/>f=".$f;
+            ?></h1>
         </div>
     </div>
     <div id="Gi4" class="topGridi WH"></div>
