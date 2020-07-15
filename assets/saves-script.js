@@ -21,14 +21,17 @@ srchBtn.addEventListener('click',() => {
 //Discription hide
 const Gis = Array.from(document.querySelectorAll('.topGridi'));
 const GiDis = document.querySelectorAll('.GiDis');
+const GiCont = document.querySelectorAll('.GiCont');
 for(let i = 0;i <= 5; i++) {
     Gis[i].addEventListener('mouseover',()=>{
         GiDis[i].style.height = "87px";
         GiDis[i].style.padding = "10px";
+        GiCont[i].style.backgroundColor = "rgba(21,18,11,0)";
     });
     Gis[i].addEventListener('mouseleave',()=>{
         GiDis[i].style.height = "0px";
         GiDis[i].style.padding = "0px";
+        GiCont[i].style.backgroundColor = "rgba(21,18,11,0.5)";
     });
 }
 //LogoShrink

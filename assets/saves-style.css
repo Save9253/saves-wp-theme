@@ -171,7 +171,6 @@ header{
     display: flex;
 }
 .GiCont{
-    background-color: rgba(21,18,11,0.5);
     border-radius: inherit;
     display: flex;
     flex-direction: column;
