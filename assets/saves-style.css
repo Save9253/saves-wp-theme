@@ -11,7 +11,9 @@ body{
     font-family: 'Mukta' , fallback, Helvetica, sans-serif;
     margin:0;
 }
-
+.trns1{
+    transition:1s ease;
+}
 /* Text */
 p,h1{
     line-height: 1.2em;
@@ -123,7 +125,6 @@ header{
     font-size: 16px;
     padding: 3px 0;
     line-height: 1.2em;
-    transition: 1s ease;
     animation: clrs 20s -1s linear infinite;
 }
 #s:focus,#s:hover{border-bottom-width: 2px;}
@@ -140,7 +141,6 @@ header{
     height: 18px;
     width: auto;
     padding-top: 5px;
-    transition: 1s ease;
     animation: fll 20s -1s linear infinite;
 }
 @keyframes fll {
@@ -177,6 +177,7 @@ header{
     justify-content: flex-end;
     padding:5px;
     width: 100%;
+    transition: 1s ease;
 }
 .GiCont h1{
     padding: 0 5px;
