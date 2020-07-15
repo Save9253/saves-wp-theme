@@ -18,6 +18,19 @@ srchBtn.addEventListener('click',() => {
     }
 });
 
+//Discription hide
+const Gis = Array.from(document.querySelectorAll('.topGridi'));
+const GiDis = document.querySelectorAll('.GiDis');
+for(let i = 0;i <= 5; i++) {
+    Gis[i].addEventListener('mouseover',()=>{
+        GiDis[i].style.height = "87px";
+        GiDis[i].style.padding = "10px";
+    });
+    Gis[i].addEventListener('mouseleave',()=>{
+        GiDis[i].style.height = "0px";
+        GiDis[i].style.padding = "0px";
+    });
+}
 //LogoShrink
 /*const logo = document.querySelector('#logo');
 addEventListener('scroll',() => {

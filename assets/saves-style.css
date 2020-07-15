@@ -187,8 +187,14 @@ header{
     padding: 10px;
     border-radius: 0 0 5px 5px;
     width:100%;
+    overflow: hidden;
+    transition: 1s ease;
 }
-
+.Dis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .Or{background-color: var(--orng);}
 .Rd{background-color: var(--rd);}
 .Pr{background-color: var(--prpl);}

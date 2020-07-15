@@ -28,7 +28,7 @@
     <div id="Gi1" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$a]->image_id)?>)">
         <div class="GiCont WH">
             <h1><?php echo $pds[$a]->name ?></h1>
-            <div class="GiDis Or WH">
+            <div class="GiDis Or WH" style="height:0px;padding: 0px;">
                 <p>
                     <?php
                         if($pds[$a]->price == $pds[$a]->regular_price):
@@ -38,14 +38,14 @@
                         endif
                     ?>
                 </p>
-                <p><?php echo $pds[$a]->short_description ?></p>
+                <p class="Dis"><?php echo $pds[$a]->short_description ?></p>
             </div>
         </div>
     </div>
     <div id="Gi2" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$b]->image_id)?>)">
         <div class="GiCont WH">
             <h1><?php echo $pds[$b]->name ?></h1>
-            <div class="GiDis Rd WH">
+            <div class="GiDis Rd WH" style="height:0px;padding: 0px;">
                 <p>
                     <?php
                         if($pds[$b]->price == $pds[$b]->regular_price):
@@ -55,14 +55,14 @@
                         endif
                     ?>
                 </p>
-                <p><?php echo $pds[$b]->short_description ?></p>
+                <p class="Dis"><?php echo $pds[$b]->short_description ?></p>
             </div>
         </div>
     </div>
     <div id="Gi3" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$c]->image_id)?>)">
         <div class="GiCont WH">
             <h1><?php echo $pds[$c]->name ?></h1>
-            <div class="GiDis Or WH">
+            <div class="GiDis Pr WH" style="height:0px;padding: 0px;">
                 <p>
                     <?php
                         if($pds[$c]->price == $pds[$c]->regular_price):
@@ -72,14 +72,14 @@
                         endif
                     ?>
                 </p>
-                <p><?php echo $pds[$c]->short_description ?></p>
+                <p class="Dis"><?php echo $pds[$c]->short_description ?></p>
             </div>
         </div>
     </div>
     <div id="Gi4" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$d]->image_id)?>)">
         <div class="GiCont WH">
             <h1><?php echo $pds[$d]->name ?></h1>
-            <div class="GiDis Or WH">
+            <div class="GiDis Bl WH" style="height:0px;padding: 0px;">
                 <p>
                     <?php
                         if($pds[$d]->price == $pds[$d]->regular_price):
@@ -89,14 +89,14 @@
                         endif
                     ?>
                 </p>
-                <p><?php echo $pds[$d]->short_description ?></p>
+                <p class="Dis"><?php echo $pds[$d]->short_description ?></p>
             </div>
         </div>
     </div>
     <div id="Gi5" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$e]->image_id)?>)">
         <div class="GiCont WH">
             <h1><?php echo $pds[$e]->name ?></h1>
-            <div class="GiDis Or WH">
+            <div class="GiDis Or WH" style="height:0px;padding: 0px;">
                 <p>
                     <?php
                         if($pds[$e]->price == $pds[$e]->regular_price):
@@ -106,14 +106,14 @@
                         endif
                     ?>
                 </p>
-                <p><?php echo $pds[$e]->short_description ?></p>
+                <p class="Dis"><?php echo $pds[$e]->short_description ?></p>
             </div>
         </div>
     </div>
     <div id="Gi6" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$f]->image_id)?>)">
         <div class="GiCont WH">
             <h1><?php echo $pds[$f]->name ?></h1>
-            <div class="GiDis Or WH">
+            <div class="GiDis Rd WH" style="height:0px;padding: 0px;">
                 <p>
                     <?php
                         if($pds[$f]->price == $pds[$f]->regular_price):
@@ -123,7 +123,7 @@
                         endif
                     ?>
                 </p>
-                <p><?php echo $pds[$f]->short_description ?></p>
+                <p class="Dis"><?php echo $pds[$f]->short_description ?></p>
             </div>
         </div>
     </div>
