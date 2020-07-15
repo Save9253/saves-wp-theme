@@ -10,136 +10,33 @@
 <?php
     $pds = wc_get_products( $args );
     $pdsC = count($pds) - 1;
-    $i = 0;
-    $a = $i;
-    if($i < $pdsC){$i++;} else {$i = 0;};
-    $b = $i;
-    if($i < $pdsC){$i++;} else {$i = 0;};
-    $c = $i;
-    if($i < $pdsC){$i++;} else {$i = 0;};
-    $d = $i;
-    if($i < $pdsC){$i++;} else {$i = 0;};
-    $e = $i;
-    if($i < $pdsC){$i++;} else {$i = 0;};
-    $f = $i;
+
 ?>
 <div id="bckgr"></div>
 <section id="topGrid">
-    <div id="Gi1" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$a]->image_id)?>)">
-        <div class="GiCont WH" style="background-color: rgba(21,18,11,0.5);">
-            <h1><?php echo $pds[$a]->name ?></h1>
-            <div class="GiDis Or WH" style="height:0px;padding: 0px;">
-                <p>
-                    <?php
-                        if($pds[$a]->price == $pds[$a]->regular_price):
-                            echo "$".$pds[$a]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">$'.$pds[$a]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$a]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p class="Dis"><?php echo $pds[$a]->short_description ?></p>
-            </div>
-        </div>
+    <?php
+        for($i = 0, $c = 1, $cl=""; $c <= ($pdsC + 1); $c++){
+            $d="Gi".$c;
+            if($c > 6){$d = ""; $cl = "hid"; };
+            echo '<div id="'.$d.'" class="topGridi WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
+            echo '<div class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
+            echo '<h1>'.$pds[$i]->name.'</h1>';
+            echo '<div class="GiDis Or WH100" style="height:0px;padding: 0px;">';
+            echo '<p>';
+                if($pds[$i]->price == $pds[$i]->regular_price):
+                    echo "$".$pds[$i]->regular_price;
+                else:
+                    echo '<span class="oldPrc">$'.$pds[$i]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$i]->sale_price.'</span>';
+                endif;
+            echo '</p>';
+            echo '<p class="Dis"> i='.$i.' '.$pds[$i]->short_description.'</p>';
+            echo '</div></div></div>';
+            if($i < $pdsC){$i++;} else {$i = 0;};
+        };
+    ?>
+    <div id="GB" class="topGridi WH100">
     </div>
-    <div id="Gi2" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$b]->image_id)?>)">
-        <div class="GiCont WH" style="background-color: rgba(21,18,11,0.5);">
-            <h1><?php echo $pds[$b]->name ?></h1>
-            <div class="GiDis Rd WH" style="height:0px;padding: 0px;">
-                <p>
-                    <?php
-                        if($pds[$b]->price == $pds[$b]->regular_price):
-                            echo "$".$pds[$b]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">$'.$pds[$b]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$b]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p class="Dis"><?php echo $pds[$b]->short_description ?></p>
-            </div>
-        </div>
-    </div>
-    <div id="Gi3" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$c]->image_id)?>)">
-        <div class="GiCont WH" style="background-color: rgba(21,18,11,0.5);">
-            <h1><?php echo $pds[$c]->name ?></h1>
-            <div class="GiDis Pr WH" style="height:0px;padding: 0px;">
-                <p>
-                    <?php
-                        if($pds[$c]->price == $pds[$c]->regular_price):
-                            echo "$".$pds[$c]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">$'.$pds[$c]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$c]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p class="Dis"><?php echo $pds[$c]->short_description ?></p>
-            </div>
-        </div>
-    </div>
-    <div id="Gi4" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$d]->image_id)?>)">
-        <div class="GiCont WH" style="background-color: rgba(21,18,11,0.5);">
-            <h1><?php echo $pds[$d]->name ?></h1>
-            <div class="GiDis Bl WH" style="height:0px;padding: 0px;">
-                <p>
-                    <?php
-                        if($pds[$d]->price == $pds[$d]->regular_price):
-                            echo "$".$pds[$d]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">$'.$pds[$d]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$d]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p class="Dis"><?php echo $pds[$d]->short_description ?></p>
-            </div>
-        </div>
-    </div>
-    <div id="Gi5" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$e]->image_id)?>)">
-        <div class="GiCont WH" style="background-color: rgba(21,18,11,0.5);">
-            <h1><?php echo $pds[$e]->name ?></h1>
-            <div class="GiDis Or WH" style="height:0px;padding: 0px;">
-                <p>
-                    <?php
-                        if($pds[$e]->price == $pds[$e]->regular_price):
-                            echo "$".$pds[$e]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">$'.$pds[$e]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$e]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p class="Dis"><?php echo $pds[$e]->short_description ?></p>
-            </div>
-        </div>
-    </div>
-    <div id="Gi6" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$f]->image_id)?>)">
-        <div class="GiCont WH" style="background-color: rgba(21,18,11,0.5);">
-            <h1><?php echo $pds[$f]->name ?></h1>
-            <div class="GiDis Rd WH" style="height:0px;padding: 0px;">
-                <p>
-                    <?php
-                        if($pds[$f]->price == $pds[$f]->regular_price):
-                            echo "$".$pds[$f]->regular_price;
-                        else:
-                            echo '<span class="oldPrc">$'.$pds[$f]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$f]->sale_price.'</span>';
-                        endif
-                    ?>
-                </p>
-                <p class="Dis"><?php echo $pds[$f]->short_description ?></p>
-            </div>
-        </div>
-    </div>
-    <div id="Gi7" class="topGridi WH">
-        <p>
-            <?php
-                echo 'a '.$a;
-                echo '<br/>b '.$b;
-                echo '<br/>c '.$c;
-                echo '<br/>d '.$d;
-                echo '<br/>d '.$e;
-                echo '<br/>d '.$f;
-            ?>
-        </p>
-    </div>
-    <div id="GH" class="topGridi WH">
+    <div id="GH" class="topGridi WH100">
         <a id="logoLink" class="cntr" href="<?php echo home_url( '/' );?>">
             <svg id="logoTG" width="301" transform="scale" height="118" viewBox="0 0 301 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M234.33 117.579C205.348 114.167 176.397 109.345 147.1 110.161C122.008 109.876 96.9107 110.502 71.8414 111.061C64.7948 110.86 64.2291 107.097 58.1287 110.177C54.0801 105.755 36.2629 110.321 37.2917 105.655C48.587 104.486 60.3073 106.326 71.3531 103.989C60.9916 100.705 48.9483 102.33 37.9453 101.545C32.751 99.8567 14.3399 104.768 17.9339 96.7792C22.6825 96.3906 34.6454 93.1296 23.7577 93.4986C23.1026 84.975 7.85639 92.0424 4.55972 84.7989C10.0258 81.7015 22.0354 78.7655 9.32482 79.3696C-1.44302 78.598 9.08908 77.6543 8.17153 75.1583C-0.987272 67.5717 31.4047 66.4977 16.423 59.9978C20.1218 57.1157 38.1782 54.2486 23.7027 54.173C9.60535 54.4968 26.7736 50.6867 30.5053 49.0155C20.6755 47.7532 10.6721 46.5678 0.88834 44.7945C-4.74369 36.6904 23.6701 39.8208 7.28531 36.4979C2.37311 36.809 -3.63778 35.2908 4.70071 34.0488C4.01166 32.0936 0.184857 29.1965 7.19218 28.243C10.9352 26.6581 22.3217 24.7723 12.5664 23.5664C21.1686 19.1716 31.7629 18.3875 41.3841 16.5222C50.0498 12.9325 63.187 16.6786 69.3664 10.8938C59.4412 11.0088 48.9895 11.6323 39.2044 14.1825C30.4273 15.4276 20.4529 15.3222 12.6763 14.8854C21.9826 10.7013 32.5696 12.0038 42.4878 11.0275C32.7282 6.45298 53.9335 6.984 57.4599 5.88604C86.2598 4.04016 114.988 -0.500977 143.932 1.45976C157.75 3.011 171.712 -0.0870108 185.356 3.37035C189.955 4.9785 195.762 7.08882 186.892 6.27855C192.05 13.9974 206.553 8.34031 215.522 10.3766C232.371 10.9385 249.123 13.5051 265.678 16.5122C276.532 20.2704 288.902 20.6366 298.595 27.1191C292.159 26.8819 293.135 29.3993 299.168 31.42C298.203 34.9688 283.63 31.7766 282.755 33.7358C287.595 36.8655 301.11 36.6984 300.081 42.5893C292.672 44.4943 277.394 39.7696 274.141 44.4689C279.215 50.409 253.779 42.578 266.722 49.0985C261.578 50.1415 245.307 48.0096 258.628 53.0199C263.576 54.4622 280.129 56.8862 266.107 58.052C268.143 69.9339 249.25 59.3425 242.128 61.7142C229.352 61.4818 242.185 62.6216 245.238 65.8909C239.669 65.5188 231.137 65.9712 241.982 67.9115C248.82 71.2932 258.247 71.4495 263.459 76.6904C250.647 79.9914 237.469 77.8563 224.506 77.3656C225.322 82.3857 241.755 79.7204 247.69 84.8443C253.502 87.3728 264.935 89.6509 265.522 95.7861C254.991 95.2176 244.57 92.636 234.066 92.339C240.793 98.1276 258.891 92.2604 258.419 101.493C269.044 101.58 258.043 110.228 253.27 107.535C239.629 105.259 226.01 102.329 212.121 102.93C202.067 100.453 194.561 106.897 184.402 103.819C181.792 103.883 168.973 103.116 177.465 104.719C188.299 105.87 197.296 111.558 208.461 111.037C219.31 110.199 232.204 116.813 240.817 111.795C244.823 113.902 255.805 117.286 244.288 115.752C240.485 113.997 238.074 118.458 234.33 117.579V117.579ZM115.349 106.894C119.451 104.725 104.149 103.781 101.344 103.306C95.9526 102.485 84.0564 108.448 96.0183 107.456C102.462 107.386 108.924 107.43 115.349 106.894V106.894ZM131.35 106.621C136.605 107.109 156.085 107.359 141.643 106.065C134.751 106.617 123.693 102.435 119.292 106.762C123.222 107.805 127.342 106.321 131.35 106.621V106.621ZM170.798 103.633C166.284 101.8 156.136 103.684 166.47 104.245C167.893 104.182 169.616 104.69 170.798 103.633ZM231.423 92.1652C225.944 89.5263 223.26 93.586 231.423 92.1652V92.1652ZM29.6153 79.1681C28.5228 77.4198 13.4741 80.5188 23.8019 79.8252C25.7524 79.8224 27.7425 79.8111 29.6153 79.1681ZM20.255 37.4212C17.5994 36.5803 17.9437 38.8413 20.255 37.4212V37.4212ZM279.135 32.637C275.226 29.8307 265.496 30.8825 275.315 32.8201C276.109 32.7565 279.511 33.9863 279.135 32.637ZM32.3144 22.8505C26.9863 22.3339 32.6506 24.1226 32.3144 22.8505V22.8505ZM89.4103 12.5438C97.0697 10.7119 106.899 12.6109 113.405 10.0229C102.009 12.1311 94.6262 4.54824 83.5969 8.5865C80.0389 9.97898 65.0939 13.6895 77.2062 13.7113C81.2849 13.5125 85.3938 13.3248 89.4103 12.5438V12.5438ZM151.463 8.09097C161.302 4.04352 172.474 10.1679 182.425 6.44697C172.867 3.477 161.986 4.11206 151.84 3.81691C143.43 3.61364 137.036 4.64511 142.62 7.46273C134.092 11.619 150.175 8.99294 151.463 8.09099V8.09097ZM116.92 7.08567C122.148 8.9981 129.982 3.75866 120.621 4.33577C115.402 3.12372 96.622 8.17561 111.373 7.20064C113.22 7.10844 115.07 7.07616 116.92 7.08569V7.08567ZM132.975 6.58992C132.08 2.35898 128.49 9.20331 132.975 6.58992V6.58992ZM196.128 6.53699C199.109 3.05864 202.462 9.8582 196.128 6.53699V6.53699Z" fill="url(#paint0_radial)"/>
