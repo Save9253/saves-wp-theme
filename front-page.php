@@ -59,17 +59,77 @@
             </div>
         </div>
     </div>
-    <div id="Gi3" class="topGridi WH">
+    <div id="Gi3" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$c]->image_id)?>)">
         <div class="GiCont WH">
-            <h1><?php echo count($pds);
-            echo "<br/>variables:<br/>a=".$a."<br/>b=".$b."<br/>c=".$c."<br/>d=".$d."<br/>e=".$e."<br/>f=".$f;
-            ?></h1>
+            <h1><?php echo $pds[$c]->name ?></h1>
+            <div class="GiDis Or WH">
+                <p>
+                    <?php
+                        if($pds[$c]->price == $pds[$c]->regular_price):
+                            echo "$".$pds[$c]->regular_price;
+                        else:
+                            echo '<span class="oldPrc">$'.$pds[$c]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$c]->sale_price.'</span>';
+                        endif
+                    ?>
+                </p>
+                <p><?php echo $pds[$c]->short_description ?></p>
+            </div>
         </div>
     </div>
-    <div id="Gi4" class="topGridi WH"></div>
-    <div id="Gi5" class="topGridi WH"></div>
-    <div id="Gi6" class="topGridi WH"></div>
-    <div id="Gi7" class="topGridi WH"></div>
+    <div id="Gi4" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$d]->image_id)?>)">
+        <div class="GiCont WH">
+            <h1><?php echo $pds[$d]->name ?></h1>
+            <div class="GiDis Or WH">
+                <p>
+                    <?php
+                        if($pds[$d]->price == $pds[$d]->regular_price):
+                            echo "$".$pds[$d]->regular_price;
+                        else:
+                            echo '<span class="oldPrc">$'.$pds[$d]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$d]->sale_price.'</span>';
+                        endif
+                    ?>
+                </p>
+                <p><?php echo $pds[$d]->short_description ?></p>
+            </div>
+        </div>
+    </div>
+    <div id="Gi5" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$e]->image_id)?>)">
+        <div class="GiCont WH">
+            <h1><?php echo $pds[$e]->name ?></h1>
+            <div class="GiDis Or WH">
+                <p>
+                    <?php
+                        if($pds[$e]->price == $pds[$e]->regular_price):
+                            echo "$".$pds[$e]->regular_price;
+                        else:
+                            echo '<span class="oldPrc">$'.$pds[$e]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$e]->sale_price.'</span>';
+                        endif
+                    ?>
+                </p>
+                <p><?php echo $pds[$e]->short_description ?></p>
+            </div>
+        </div>
+    </div>
+    <div id="Gi6" class="topGridi WH" style="background-image:url(<?php echo wp_get_attachment_url($pds[$f]->image_id)?>)">
+        <div class="GiCont WH">
+            <h1><?php echo $pds[$f]->name ?></h1>
+            <div class="GiDis Or WH">
+                <p>
+                    <?php
+                        if($pds[$f]->price == $pds[$f]->regular_price):
+                            echo "$".$pds[$f]->regular_price;
+                        else:
+                            echo '<span class="oldPrc">$'.$pds[$f]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$f]->sale_price.'</span>';
+                        endif
+                    ?>
+                </p>
+                <p><?php echo $pds[$f]->short_description ?></p>
+            </div>
+        </div>
+    </div>
+    <div id="Gi7" class="topGridi WH">
+        <p>All the artworks are down there</p>
+    </div>
     <div id="GH" class="topGridi WH">
         <a id="logoLink" class="cntr" href="<?php echo home_url( '/' );?>">
             <svg id="logoTG" width="301" transform="scale" height="118" viewBox="0 0 301 118" fill="none" xmlns="http://www.w3.org/2000/svg">
