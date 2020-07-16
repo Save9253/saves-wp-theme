@@ -50,10 +50,14 @@ if(Prds.length>6){
             Prds[p].classList.remove('hid');
             Prds[p].classList.add('Gi'+(g));
             Prds[p].style.opacity = 0;
+            console.log('now 1');
+        },750);
+        setTimeout(()=>{
+            console.log('now 2');
             Prds[p].style.opacity = 1;
             g++;
             p++;
-        },500);
+        },800);
 
     },4000);
 };

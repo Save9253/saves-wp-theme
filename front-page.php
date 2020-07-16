@@ -30,6 +30,7 @@
             echo '</p>';
             echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
             echo '</div></div></div>';
+            echo '<div class="GBck GBck'.$c.'"></div>';
             if($i < $pdsC){$i++;} else {$i = 0;};
         };
     ?>
