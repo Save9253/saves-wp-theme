@@ -17,10 +17,10 @@
         for($i = 0, $c = 1, $cl=""; $c <= ($pdsC + 1); $c++){
             $cl="Gi".$c;
             if($c > 6){$cl = "hid";};
-            echo '<div id="Prd'.$c.'" class="topGridi WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
+            echo '<div class="topGridi Prd WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
             echo '<div class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
             echo '<h1>'.$pds[$i]->name.'</h1>';
-            echo '<div class="GiDis Or WH100" style="height:0px;padding: 0px;">';
+            echo '<div class="GiDis WH100" style="height:0px;padding: 0px;">';
             echo '<p>';
                 if($pds[$i]->price == $pds[$i]->regular_price):
                     echo "$".$pds[$i]->regular_price;
@@ -28,7 +28,7 @@
                     echo '<span class="oldPrc">$'.$pds[$i]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$i]->sale_price.'</span>';
                 endif;
             echo '</p>';
-            echo '<p class="Dis"> i='.$i.' '.$pds[$i]->short_description.'</p>';
+            echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
             echo '</div></div></div>';
             if($i < $pdsC){$i++;} else {$i = 0;};
         };

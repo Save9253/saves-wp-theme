@@ -19,21 +19,40 @@ srchBtn.addEventListener('click',() => {
 });
 
 //Discription hide
-const Gis = Array.from(document.querySelectorAll('.topGridi'));
 const GiDis = document.querySelectorAll('.GiDis');
 const GiCont = document.querySelectorAll('.GiCont');
-for(let i = 0;i <= 5; i++) {
-    Gis[i].addEventListener('mouseover',()=>{
+const Prds = document.querySelectorAll('.Prd');
+for(let i = 0;i <= Prds.length-1; i++) {
+    Prds[i].addEventListener('mouseover',()=>{
         GiDis[i].style.height = "87px";
         GiDis[i].style.padding = "10px";
         GiCont[i].style.backgroundColor = "rgba(21,18,11,0)";
     });
-    Gis[i].addEventListener('mouseleave',()=>{
+    Prds[i].addEventListener('mouseleave',()=>{
         GiDis[i].style.height = "0px";
         GiDis[i].style.padding = "0px";
         GiCont[i].style.backgroundColor = "rgba(21,18,11,0.5)";
     });
-}
+};
+
+//Shwitching Products
+if(Prds.length>6){
+    let g = 1;
+    let p = 6;
+    setInterval(()=>{
+        if(g>6){g=1};
+        if(p>(Prds.length-1)){p=0};
+        let Gi = document.querySelector('.Gi'+ g)
+        console.log("g="+g+" p="+p);
+        Gi.classList.remove('Gi'+ g);
+        Gi.classList.add('hid');
+        Prds[p].classList.remove('hid');
+        Prds[p].classList.add('Gi'+(g));
+        g++;
+        p++;
+    },5000);
+};
+
 //LogoShrink
 /*const logo = document.querySelector('#logo');
 addEventListener('scroll',() => {
