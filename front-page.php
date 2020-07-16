@@ -34,6 +34,7 @@
         };
     ?>
     <div id="GB" class="topGridi WH100">
+
     </div>
     <div id="GH" class="topGridi WH100">
         <a id="logoLink" class="cntr" href="<?php echo home_url( '/' );?>">
@@ -69,10 +70,10 @@
                 </defs>
             </svg>
         </a>
-    <div id="mnSrchTG">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );?>
-        <?php get_search_form();?>
-    </div>
+        <div id="mnSrchTG">
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );?>
+            <?php get_search_form();?>
+        </div>
     </div>
 </section>
 <?php get_footer();?>
