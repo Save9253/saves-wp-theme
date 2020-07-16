@@ -15,9 +15,9 @@
 <section id="topGrid">
     <?php
         for($i = 0, $c = 1, $cl=""; $c <= ($pdsC + 1); $c++){
-            $d="Gi".$c;
-            if($c > 6){$d = ""; $cl = "hid"; };
-            echo '<div id="'.$d.'" class="topGridi WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
+            $cl="Gi".$c;
+            if($c > 6){$cl = "hid";};
+            echo '<div id="Prd'.$c.'" class="topGridi WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
             echo '<div class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
             echo '<h1>'.$pds[$i]->name.'</h1>';
             echo '<div class="GiDis Or WH100" style="height:0px;padding: 0px;">';
