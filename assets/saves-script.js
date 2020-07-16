@@ -42,15 +42,20 @@ if(Prds.length>6){
     setInterval(()=>{
         if(g>6){g=1};
         if(p>(Prds.length-1)){p=0};
-        let Gi = document.querySelector('.Gi'+ g)
-        console.log("g="+g+" p="+p);
-        Gi.classList.remove('Gi'+ g);
-        Gi.classList.add('hid');
-        Prds[p].classList.remove('hid');
-        Prds[p].classList.add('Gi'+(g));
-        g++;
-        p++;
-    },5000);
+        let Gi = document.querySelector('.Gi'+ g);
+        Gi.style.opacity = 0;
+        setTimeout(()=>{
+            Gi.classList.remove('Gi'+ g);
+            Gi.classList.add('hid');
+            Prds[p].classList.remove('hid');
+            Prds[p].classList.add('Gi'+(g));
+            Prds[p].style.opacity = 0;
+            Prds[p].style.opacity = 1;
+            g++;
+            p++;
+        },500);
+
+    },4000);
 };
 
 //LogoShrink

@@ -17,7 +17,7 @@
         for($i = 0, $c = 1, $cl=""; $c <= ($pdsC + 1); $c++){
             $cl="Gi".$c;
             if($c > 6){$cl = "hid";};
-            echo '<div class="topGridi Prd WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
+            echo '<div class="topGridi Prd WH100 '.$cl.'" style="opacity:1; background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
             echo '<div class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
             echo '<h1>'.$pds[$i]->name.'</h1>';
             echo '<div class="GiDis WH100" style="height:0px;padding: 0px;">';
