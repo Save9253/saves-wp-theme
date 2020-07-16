@@ -10,7 +10,6 @@
 <?php
     $pds = wc_get_products( $args );
     $pdsC = count($pds) - 1;
-
 ?>
 <div id="bckgr"></div>
 <section id="topGrid">
