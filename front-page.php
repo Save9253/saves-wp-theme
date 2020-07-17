@@ -30,12 +30,13 @@
             echo '</p>';
             echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
             echo '</div></div></div>';
-            echo '<div class="GBck GBck'.$c.'"></div>';
+            if($c<=6){echo '<div class="GBck GBck'.$c.'"></div>';};
             if($i < $pdsC){$i++;} else {$i = 0;};
         };
     ?>
-    <div id="GB" class="topGridi WH100">
-
+    <div id="GB" class="cntr topGridi WH100">
+        <h2>Scroll down</h2>
+        <p>to see all the artworks</p>
     </div>
     <div id="GH" class="topGridi WH100">
         <a id="logoLink" class="cntr" href="<?php echo home_url( '/' );?>">
