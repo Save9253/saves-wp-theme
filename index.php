@@ -17,7 +17,6 @@ if ( have_posts() ) {
 };
 
 #Blog
-
 echo "<h1>Here should be the posts</h1>";
 if(have_posts()){
     for($i = 0, $size = count($AllPosts); $i < $size; $i++){
@@ -29,6 +28,15 @@ if(have_posts()){
     }
 }
 
-get_footer();
+#Categories and tugs;
+echo "Categories: ";
+print_r(wc_get_products($args)[7]->category_ids);
+echo "<br/> Tags: ";
+print_r(wc_get_products($args)[7]->tag_ids);
+echo "<br/> get_the_category_by_ID: ";
+print_r(get_the_category_by_ID(17));
+echo "<br/> get_term: ";
+print_r(get_term(17));
 
+get_footer();
 ?>

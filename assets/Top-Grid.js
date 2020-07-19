@@ -61,14 +61,3 @@ if(Prds.length>6){
 
     },4000);
 };
-
-//LogoShrink
-/*const logo = document.querySelector('#logo');
-addEventListener('scroll',() => {
-    if(window.scrollY != 0){
-        logo.classList.add('logoShrink');
-    } else {
-        logo.classList.remove('logoShrink');
-    }
-});
-*/
