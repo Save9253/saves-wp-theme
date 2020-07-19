@@ -1,6 +1,8 @@
 <?php
     wp_enqueue_style('saves-style','/wp-content/themes/saves-wp-theme/assets/saves-style.css',array(),NULL,'all');#Add stylesheet
 
+    wp_enqueue_script('Top-Grid-JS','/wp-content/themes/saves-wp-theme/assets/Search.js',array(),NULL,true); #Add JS to every page
+
     function front_page_JS() {if(is_front_page()){wp_enqueue_script('Top-Grid-JS','/wp-content/themes/saves-wp-theme/assets/Top-Grid.js',array(),NULL,true);};};#Add JS on front-page;
     add_action('wp_enqueue_scripts','front_page_JS');
 
