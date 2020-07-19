@@ -41,7 +41,10 @@ p,h1{
 }
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
-a{text-decoration: none;}
+a{
+    text-decoration: none;
+    color:unset;
+}
 
 input[type=text]{
     border-style: none;

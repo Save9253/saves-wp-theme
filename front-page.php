@@ -18,7 +18,7 @@
             $cl="Gi".$c;
             if($c > 6){$cl = "hid";};
             echo '<div class="topGridi Prd WH100 '.$cl.'" style="opacity:1; background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
-            echo '<div class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
+            echo '<a href="'.get_permalink($pds[$i]->id).'" class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
             echo '<h1>'.$pds[$i]->name.'</h1>';
             echo '<div class="GiDis WH100" style="height:0px;padding: 0px;">';
             echo '<p>';
@@ -29,7 +29,7 @@
                 endif;
             echo '</p>';
             echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
-            echo '</div></div></div>';
+            echo '</div></a></div>';
             if($c<=6){echo '<div class="GBck GBck'.$c.'"></div>';};
             if($i < $pdsC){$i++;} else {$i = 0;};
         };
