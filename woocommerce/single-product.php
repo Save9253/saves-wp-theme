@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-
+	<section class="SnglPrdG">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -55,7 +55,7 @@ get_header(); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-
+	</section>
 <?php
 get_footer();
 
