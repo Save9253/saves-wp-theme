@@ -81,21 +81,26 @@ header{
     align-items: center;
 }
 #mnSrch,#mnSrch form{
-    display:flex;
     justify-content: end;
     align-items:center;
 }
-#mnSrch form{margin-left: 10px;}
-#menu-primary{
+#mnSrch div{
     margin:0;
     padding:0;}
-#menu-primary li{
-    display: inline;
+#mnSrch li{
     text-transform: uppercase;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
-#menu-primary a{
+#mnSrch ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style:none;
+}
+#mnSrch a{
     color: var(--orng);
     animation: clrs 20s -2s linear infinite;
     transition: 500ms ease;
@@ -109,9 +114,9 @@ header{
     75%{color:#9796CD; border-color:#9796CD}
     100%{color:#EF887E; border-color:#EF887E}
 }
-#menu-primary a:hover{bottom:3px;}
+#mnSrch a:hover{bottom:3px;}
 
-.current-menu-item{text-decoration: overline;}
+.current-menu-item,.current_page_item{text-decoration: overline;}
 
 #s{
     background: transparent;
@@ -233,7 +238,7 @@ header{
 #logoTG{
     width:auto;
     height:auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Products */
