@@ -1,0 +1,160 @@
+:root{
+    /*colors*/
+    --prpl:#872d51;
+    --rd:#e15369;
+    --orng:#ef887a;
+    --bl:#9796cf;
+    --blk:#15120b;
+}
+*{box-sizing: border-box;}
+body{
+    font-family: 'Mukta' , fallback, Helvetica, sans-serif;
+    margin:0;
+}
+.trns1{
+    transition:1s ease;
+}
+/* Text */
+p,h1{
+    line-height: 1.2em;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+/* Divs */
+.WH100{
+    width:100%;
+    height: 100%;
+}
+.cntr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hid{
+    opacity:0 !important;
+    display:none !important;
+}
+
+@font-face {
+    font-family: 'PoorRichard';
+    src: url("./fonts/poorRichard.ttf") format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+a{
+    text-decoration: none;
+    color:unset;
+}
+
+input[type=text]{
+    border-style: none;
+    outline:none;
+    font-family: 'Mukta' , fallback, Helvetica, sans-serif;
+}
+#bckgr{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+    width:100vw;
+    height:100vh;
+    background: linear-gradient(#EF887E,#e15369,#872d51,#9796CD ,#EF887E,#e15369,#872d51,#9796CD);
+    background-size: 100% 400%;
+    background-position-y: 0%;
+    animation: bckclr linear 20s infinite;
+}
+@keyframes bckclr{
+    0%{background-position-y: 0%;}
+    100%{background-position-y: 75%;}
+}
+
+/* Header */
+header{
+    position: fixed;
+    top:0;
+    z-index: 999;
+    width:100vw;
+    padding: 10px 20px;
+    background-color: var(--blk);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 5px 0 5px;
+    border-radius: 10px;
+}
+#mnSrch{
+    display: flex;
+    flex-wrap: wrap;
+}
+#mnSrch,#mnSrch form{
+    justify-content: end;
+    align-items:center;
+}
+#mnSrch div{
+    margin:0;
+    padding:0;}
+#mnSrch li{
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-size: 18px;
+}
+#mnSrch ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style:none;
+}
+#mnSrch a{
+    color: var(--orng);
+    animation: clrs 20s -2s linear infinite;
+    transition: 500ms ease;
+    position: relative;
+    bottom:0px;
+}
+@keyframes clrs {
+    0%{color:#EF887E; border-color:#EF887E }
+    25%{color:#e15369; border-color:#e15369}
+    50%{color:#872d51; border-color:#872d51}
+    75%{color:#9796CD; border-color:#9796CD}
+    100%{color:#EF887E; border-color:#EF887E}
+}
+#mnSrch a:hover{bottom:3px;}
+
+.current-menu-item,.current_page_item{text-decoration: overline;}
+
+#s{
+    background: transparent;
+    border-bottom-style:solid;
+    border-bottom-width: 1px;
+    border-color: var(--orng);
+    color: var(--orng);
+    font-size: 16px;
+    padding: 3px 0;
+    line-height: 1.2em;
+    animation: clrs 20s -1s linear infinite;
+}
+#s:focus,#s:hover{border-bottom-width: 2px;}
+#srchBtn{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    bottom:0px;
+    outline:none;
+    transition: 500ms ease;
+}
+#srchBtn:hover{bottom:3px;}
+#srchSVG{
+    height: 18px;
+    width: auto;
+    padding-top: 5px;
+    animation: fll 20s -1s linear infinite;
+}
+@keyframes fll {
+    0%{fill:#EF887E}
+    25%{fill:#e15369}
+    50%{fill:#872d51}
+    75%{fill:#9796CD}
+    100%{fill:#EF887E}
+}

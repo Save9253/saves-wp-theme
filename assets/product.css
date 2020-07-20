@@ -1,0 +1,61 @@
+/* Products */
+.oldPrc{
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+.newPrc{
+    font-weight: bold;
+}
+.Prd{transition: 750ms ease;}
+
+/* Single Product */
+.SnglPrdG{
+    display: grid;
+    width: 100vw;
+    height:100vh;
+    grid-template-columns: 50% 50%;
+    color:white;
+    padding:5px;
+    grid-gap: 5px;
+}
+.PrdImgs{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--blk);
+}
+.PrdImgs ol{
+    border-radius: 0 0 10px 10px;
+    border-top: solid 1px var(--blk)!important;
+}
+.PrdImgsDiv{
+    margin-bottom: 0 !important;
+    width: calc(50vw - 5px) !important;
+    border-radius: inherit;
+}
+.PrdImgsDiv div{
+    border-radius: 10px 10px 0 0;
+}
+.slFlsh{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0;
+    border-radius: 5px 0 0;
+    z-index: 9;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+.slFlsh div{
+    background-color: var(--rd);
+    transform: rotate(-45deg);
+    padding: 30px 20px 5px 20px;
+    position: relative;
+    top: -10px;
+    left: -55px;
+    width: 160px;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 10;
+}

@@ -1,10 +1,11 @@
 <?php
-    wp_enqueue_style('saves-style','/wp-content/themes/saves-wp-theme/assets/saves-style.css',array(),NULL,'all');#Add stylesheet
-
     #Load Scripts
     function load_scripts() {
         if(is_front_page()){wp_enqueue_script('Top-Grid-JS','/wp-content/themes/saves-wp-theme/assets/Top-Grid.js',array(),NULL,true);};
-        wp_enqueue_script('Search','/wp-content/themes/saves-wp-theme/assets/Search.js',array(),NULL,true); #Add JS to every page
+        wp_enqueue_script('Search','/wp-content/themes/saves-wp-theme/assets/Search.js',array(),NULL,true);
+        wp_enqueue_style('general-CSS','/wp-content/themes/saves-wp-theme/assets/general.css',array(),NULL,'all');
+        if(is_front_page()){wp_enqueue_style('front-page-CSS','/wp-content/themes/saves-wp-theme/assets/front-page.css',array(),NULL,'all');};
+        if(is_product()){wp_enqueue_style('product-CSS','/wp-content/themes/saves-wp-theme/assets/product.css',array(),NULL,'all');};
     };
     add_action('wp_enqueue_scripts','load_scripts');
 
