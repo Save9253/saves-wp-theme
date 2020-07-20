@@ -34,4 +34,3 @@
         <?php get_search_form();?>
     </div>
 </header>
-<section style="height:60px"></section>

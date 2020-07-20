@@ -31,8 +31,8 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div <?php wc_product_class( '', $product ); ?>>
-	<div class="PrdImgs">
+<div id="SnglPrdG" <?php wc_product_class( '', $product ); ?>>
+	<div class="PrdImgs Gridi">
 		<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.
@@ -44,8 +44,16 @@ if ( post_password_required() ) {
 		?>
 	</div>
 
-	<div class="summary entry-summary">
+	<div class="summary entry-summary Smr Gridi">
 		<?php
+		/**
+		 * woocommerce_before_main_content hook.
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 */
+		do_action( 'woocommerce_before_main_content' );
+
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
