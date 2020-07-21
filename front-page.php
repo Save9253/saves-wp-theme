@@ -39,8 +39,10 @@
         };
     ?>
     <div id="GB" class="cntr topGridi WH100">
-        <h2>Scroll down</h2>
-        <p>to see all the artworks</p>
+        <a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>">
+            <h2>Press Here</h2>
+            <p>to see all the artworks</p>
+        </a>
     </div>
     <div id="GH" class="topGridi WH100">
         <a id="logoLink" class="cntr" href="<?php echo home_url( '/' );?>">
