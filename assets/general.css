@@ -45,6 +45,14 @@ a{
     text-decoration: none;
     color:unset;
 }
+p{
+    margin-block-start: 10px;
+    margin-block-end: 0;
+}
+h2,h3{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
 
 input[type=text]{
     border-style: none;

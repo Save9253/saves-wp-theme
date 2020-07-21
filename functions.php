@@ -6,6 +6,7 @@
         wp_enqueue_style('general-CSS','/wp-content/themes/saves-wp-theme/assets/general.css',array(),NULL,'all');
         if(is_front_page()){wp_enqueue_style('front-page-CSS','/wp-content/themes/saves-wp-theme/assets/front-page.css',array(),NULL,'all');};
         if(is_product()){wp_enqueue_style('product-CSS','/wp-content/themes/saves-wp-theme/assets/product.css',array(),NULL,'all');};
+        if(is_archive()){wp_enqueue_style('archive-CSS','/wp-content/themes/saves-wp-theme/assets/archive.css',array(),NULL,'all');};
     };
     add_action('wp_enqueue_scripts','load_scripts');
 
