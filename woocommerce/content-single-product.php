@@ -32,19 +32,31 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="SnglPrdG" <?php wc_product_class( '', $product ); ?>>
-	<div class="PrdImgs Gridi">
+	<div class="Col1">
+		<div class="PrdImgs Gridi">
+			<?php
+			/**
+			 * Hook: woocommerce_before_single_product_summary.
+			 *
+			 * @hooked woocommerce_show_product_sale_flash - 10
+			 * @hooked woocommerce_show_product_images - 20
+			 */
+			do_action( 'woocommerce_before_single_product_summary' );
+			?>
+		</div>
 		<?php
 		/**
-		 * Hook: woocommerce_before_single_product_summary.
+		 * Hook: woocommerce_after_single_product_summary.
 		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
+		 * @hooked woocommerce_output_product_data_tabs - 10
+		 * @hooked woocommerce_upsell_display - 15
+		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_before_single_product_summary' );
+		do_action( 'woocommerce_after_single_product_summary' );
 		?>
 	</div>
-	<div class="SmrLngDis">
-		<div class="summary entry-summary Smr Gridi">
+	<div class="Col2">
+		<div class="Smr Gridi">
 			<?php
 			/**
 			 * woocommerce_before_main_content hook.
@@ -80,16 +92,7 @@ if ( post_password_required() ) {
 			<?php the_content(); ?>
 		</div>
 	</div>
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
+
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

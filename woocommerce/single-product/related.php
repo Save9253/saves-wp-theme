@@ -21,33 +21,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products">
+	<div class="related products RelD">
 
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
+			<div class="Gridi RelT"><h2><?php echo esc_html( $heading ); ?></h2></div>
 		<?php endif; ?>
-		
+
 		<?php woocommerce_product_loop_start(); ?>
 
 			<?php foreach ( $related_products as $related_product ) : ?>
 
+				<div class="Gridi RelP" style="background-image:url('<?php echo wp_get_attachment_url($related_product->image_id)?>)">
 					<?php
-					$post_object = get_post( $related_product->get_id() );
-
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-
-					wc_get_template_part( 'content', 'product' );
+							if($related_product->is_on_sale()){
+								echo '<div class="slFlshS"><div class="cntr"><p>Sale!</p></div></div>';
+							}
 					?>
-
+					<div class="RelPCon">
+						<a href="<?php echo get_permalink($related_product->id)?>">
+							<h3><?php echo $related_product->name ?></h3>
+							<p><?php
+							if($related_product->price == $related_product->regular_price):
+								echo '<span class="prc">$'.$related_product->regular_price.'</span>';
+							else:
+								echo '<span class="oldPrc">$'.$related_product->regular_price.'</span>'." ".'<span class="newPrc">$'.$related_product->sale_price.'</span>';
+							endif;
+							?></p>
+							<p class="Dis"><?php echo $related_product->short_description ?></p>
+						</a>
+					</div>
+				</div>
 			<?php endforeach; ?>
 
 		<?php woocommerce_product_loop_end(); ?>
 
-	</section>
+	</div>
 	<?php
 endif;
 
