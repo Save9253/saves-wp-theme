@@ -43,32 +43,42 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_before_single_product_summary' );
 		?>
 	</div>
+	<div class="SmrLngDis">
+		<div class="summary entry-summary Smr Gridi">
+			<?php
+			/**
+			 * woocommerce_before_main_content hook.
+			 *
+			 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+			 * @hooked woocommerce_breadcrumb - 20
+			 */
+			do_action( 'woocommerce_before_main_content' );
 
-	<div class="summary entry-summary Smr Gridi">
-		<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
+			/**
+			 * Hook: woocommerce_single_product_summary.
+			 *
+			 * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_rating - 10
+			 * @hooked woocommerce_template_single_price - 10
+			 * @hooked woocommerce_template_single_excerpt - 20
+			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_meta - 40
+			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked WC_Structured_Data::generate_product_data() - 60
+			 */
+			do_action( 'woocommerce_single_product_summary' );
 
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		do_action( 'woocommerce_single_product_summary' );
+			?>
+		</div>
+		<div class="lngDis Gridi">
+			<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );?>
 
-		?>
+			<?php if ( $heading ) : ?>
+				<h2><?php echo esc_html( $heading ); ?></h2>
+			<?php endif; ?>
+
+			<?php the_content(); ?>
+		</div>
 	</div>
 	<?php
 	/**
