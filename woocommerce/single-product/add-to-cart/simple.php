@@ -14,7 +14,7 @@ global $product;
 if ( ! $product->is_purchasable() ) {
 	return;
 }
-
+if(wc_get_stock_html( $product )){echo '<div class="stckAddCrt">';}
 echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
@@ -45,5 +45,5 @@ if ( $product->is_in_stock() ) : ?>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-
+	<?php if(wc_get_stock_html( $product )){echo '</div>';};?>
 <?php endif; ?>
