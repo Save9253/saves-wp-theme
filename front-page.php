@@ -89,7 +89,7 @@
                 </defs>
             </svg>
         </a>
-        <div id="mnSrch">
+        <div id="mnSrchG">
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) );?>
             <?php get_search_form();?>
         </div>
