@@ -24,15 +24,21 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	?>
 	<div class="loopItmCon">
 		<a href="<?php echo get_permalink($product->id)?>">
-			<h3><?php echo $product->name ?></h3>
+			<?php if($product->stock_status == 'instock' ) : ?>
+			<h3><?php echo $product->name?></h3>
 			<p><?php
-			if($product->price == $product->regular_price):
+			if($product->price == $product->regular_price){
 				echo '<span class="prc">$'.$product->regular_price.'</span>';
-			else:
+			}else{
 				echo '<span class="oldPrc">$'.$product->regular_price.'</span>'." ".'<span class="newPrc">$'.$product->sale_price.'</span>';
-			endif;
+			};
 			?></p>
 			<p class="Dis"><?php echo $product->short_description ?></p>
+			<?php
+				else:
+				echo '<h3 style="color:var(--rd);">SOLD</h3>';
+				endif;
+			?>
 		</a>
 	</div>
 	<?php

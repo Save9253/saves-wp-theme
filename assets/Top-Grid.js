@@ -1,6 +1,6 @@
 //Discription hide
 const GiDis = document.querySelectorAll('.GiDis');
-const GiCont = document.querySelectorAll('.GiCont');
+const GiCont = document.querySelectorAll('.GiA');
 const Prds = document.querySelectorAll('.Prd');
 for(let i = 0;i <= Prds.length-1; i++) {
     Prds[i].addEventListener('mouseover',()=>{

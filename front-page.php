@@ -11,7 +11,6 @@
     if(function_exists('wc_get_product')){
         $pds = wc_get_products(array(
             'status' => 'publish',
-            'stock_status' => 'instock',
         ));
         $pdsC = count($pds);
         if($pdsC <= 6){$C = 6;}
@@ -24,21 +23,26 @@
             for($i = 0, $c = 0, $a = 1;$c < $C; $c++){
                 $cl="Gi".$a;
                 if($a > 6){$cl = "hid";};
-                echo '<div class="topGridi Prd WH100 '.$cl.'" style="opacity:1; background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
-                echo '<a href="'.get_permalink($pds[$i]->id).'" class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
-                echo '<h1>'.$pds[$i]->name.'</h1>';
-                echo '<div class="GiDis WH100" style="height:0px;padding: 0px;">';
-                echo '<p>';
-                    if($pds[$i]->price == $pds[$i]->regular_price):
-                        echo "$".$pds[$i]->regular_price;
-                    else:
-                        echo '<span class="oldPrc">$'.$pds[$i]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$i]->sale_price.'</span>';
-                    endif;
-                echo '</p>';
-                echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
-                echo '</div></a></div>';
+                if($pds[$i]->catalog_visibility == 'visible'){
+                    if($pds[$i]->stock_status == 'instock'){
+                    echo '<div class="topGridi Prd WH100 '.$cl.'" style="opacity:1; background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
+                    echo '<a href="'.get_permalink($pds[$i]->id).'" class="GiCont GiA WH100" style="background-color: rgba(21,18,11,0.5);">';
+                    echo '<h1>'.$pds[$i]->name.'</h1>';
+                    echo '<div class="GiDis WH100" style="height:0px;padding: 0px;">';
+                    echo '<p>';
+                        if($pds[$i]->price == $pds[$i]->regular_price):
+                            echo "$".$pds[$i]->regular_price;
+                        else:
+                            echo '<span class="oldPrc">$'.$pds[$i]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$i]->sale_price.'</span>';
+                        endif;
+                    echo '</p>';
+                    echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
+                    echo '</div></a></div>';
+                    } else {echo '<div class="topGridi WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')"><a href="'.get_permalink($pds[$i]->id).'" class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);"><h1>SOLD</h1></a></div>';}
+                    $a++;
+                };
+                if($pds[$i]->catalog_visibility == 'hidden'){$c--;}
                 if($i < $pdsC-1){$i++;} else {$i = 0;};
-                $a++;
             };
             for($i = 1;$i <= 6;$i++){
                 echo '<div class="GBck GBck'.$i.'"></div>';
