@@ -60,7 +60,7 @@
 }
 /*Product Summary*/
 .Smr{
-    flex-direction: column;
+    display:block;
     padding:20px;
     margin-bottom: 0 !important;
 }
@@ -73,7 +73,6 @@
 .Prc{
     color: var(--orng);
     margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
     font-size: 22px;
     font-weight: 600;
 }
@@ -101,6 +100,7 @@
 .Crt{
     display: grid;
     grid-template-columns: 50px auto;
+    margin-top: 5px;
 }
 .CrtBut1, .CrtButMn,.Crt input{
     background-color: var(--rd);

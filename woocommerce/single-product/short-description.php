@@ -15,11 +15,12 @@ global $post;
 
 $short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
-if ( ! $short_description ) {
-	return;
-}
+#if ( ! $short_description ) {
+#	return;
+#}
 
 global $product;
+
 $dmnUn = get_option('woocommerce_dimension_unit');
 $wghtUn = get_option('woocommerce_weight_unit');
 $prdWh = $product->weight;
@@ -46,7 +47,7 @@ $recHgy = ($recHg/2) - 2.5;
 
 <div class="shrtDis" style="grid-template-columns: auto <?php echo $recWd+70; ?>px;">
 	<div>
-		<?php echo $short_description; // WPCS: XSS ok.	?>
+		<?php if($short_description){echo $short_description;} elseif($product->description){echo '<p>'.$product->description.'</p>';} else {echo "<p>No description available</p>";}// WPCS: XSS ok.	?>
 	</div>
 	<svg width="<?php echo $recWd+70; ?>" height="<?php echo $recHg+50; ?>" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
 		<rect x="10" y="10" width="<?php echo $recWd ?>" height="<?php echo $recHg ?>" stroke-width="1.5"/>

@@ -82,15 +82,23 @@ if ( post_password_required() ) {
 
 			?>
 		</div>
+		<?php
+			global $post;
+
+			$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+
+			if($short_description):
+		?>
 		<div class="lngDis Gridi">
-			<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );?>
+			<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
 
-			<?php if ( $heading ) : ?>
-				<h2><?php echo esc_html( $heading ); ?></h2>
-			<?php endif; ?>
+			if ( $heading ){
+				echo '<h2>'.esc_html( $heading ).'</h2>';
+			}
 
-			<?php the_content(); ?>
+			the_content(); ?>
 		</div>
+		<?php endif; ?>
 	</div>
 
 </div>

@@ -9,7 +9,13 @@
 <body <?php body_class();?>>
 <?php
     if(function_exists('wc_get_product')){
-        $pds = wc_get_products( $args );
+        $pdsAll = wc_get_products( $args );
+        function filter_products($prd){
+            if($prd->stock_status == 'instock' && $prd->catalog_visibility == 'visible' && $prd->status == 'publish'){
+                return $prd;
+            }
+        }
+        $pds = array_filter($pdsAll, "filter_products");
         $pdsC = count($pds) - 1;
     };
 ?>
@@ -17,9 +23,9 @@
 <section id="topGrid">
     <?php
         if(function_exists('wc_get_products')){
-            for($i = 0, $c = 1, $cl=""; $c <= ($pdsC + 1); $c++){
-                $cl="Gi".$c;
-                if($c > 6){$cl = "hid";};
+            for($i = 0, $c = 0, $a = 1, $cl=""; $c <= $pdsC; $c++){
+                $cl="Gi".$a;
+                if($a > 6){$cl = "hid";};
                 echo '<div class="topGridi Prd WH100 '.$cl.'" style="opacity:1; background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')">';
                 echo '<a href="'.get_permalink($pds[$i]->id).'" class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);">';
                 echo '<h1>'.$pds[$i]->name.'</h1>';
@@ -33,8 +39,8 @@
                 echo '</p>';
                 echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
                 echo '</div></a></div>';
-                if($c<=6){echo '<div class="GBck GBck'.$c.'"></div>';};
                 if($i < $pdsC){$i++;} else {$i = 0;};
+                if($a<=6){echo '<div class="GBck GBck'.$a.'"></div>';$a++;};
             };
         };
     ?>

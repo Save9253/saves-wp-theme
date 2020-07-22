@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="loopItm" style="background-image:url('<?php echo wp_get_attachment_url($product->image_id)?>)">
+<div class="loopItm" style="background-image:url(<?php echo wp_get_attachment_url($product->image_id)?>)">
 	<?php
 		if($product->is_on_sale()){
 			echo '<div class="slFlshS"><div class="cntr"><p>Sale!</p></div></div>';
