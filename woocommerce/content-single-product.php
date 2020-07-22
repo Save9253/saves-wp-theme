@@ -87,20 +87,22 @@ if ( post_password_required() ) {
 
 			$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
+			if($product->stock_status == 'outofstock'){echo '</div>';}
+
 			if($short_description):
 		?>
-		<div class="lngDis Gridi">
-			<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
+			<div class="lngDis Gridi">
+				<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
 
-			if ( $heading ){
-				echo '<h2>'.esc_html( $heading ).'</h2>';
-			}
+				if ( $heading ){
+					echo '<h2>'.esc_html( $heading ).'</h2>';
+				}
 
-			the_content(); ?>
-		</div>
-		<?php endif; ?>
-	</div>
-
+				the_content(); ?>
+			</div>
+		<?php endif;
+		if($product->stock_status == 'instock'){echo '</div>';}
+		?>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
