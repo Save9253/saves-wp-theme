@@ -33,7 +33,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				echo '<span class="oldPrc">$'.$product->regular_price.'</span>'." ".'<span class="newPrc">$'.$product->sale_price.'</span>';
 			};
 			?></p>
-			<p class="Dis"><?php echo $product->short_description ?></p>
+			<p class="Dis"><?php if($product->short_description){echo $product->short_description;} else {echo $product->description;} ?></p>
 			<?php
 				else:
 				echo '<h3 style="color:var(--rd);">SOLD</h3>';
