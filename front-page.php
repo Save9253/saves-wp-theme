@@ -13,6 +13,7 @@
             'status' => 'publish',
         ));
         $pdsC = count($pds);
+        $C = $pdsC;
         if($pdsC <= 6){$C = 6;}
     };
 ?>
@@ -36,7 +37,9 @@
                             echo '<span class="oldPrc">$'.$pds[$i]->regular_price.'</span>'." ".'<span class="newPrc">$'.$pds[$i]->sale_price.'</span>';
                         endif;
                     echo '</p>';
-                    echo '<p class="Dis">'.$pds[$i]->short_description.'</p>';
+                    echo '<p class="Dis">';
+                    if($pds[$i]->short_description){echo $pds[$i]->short_description;} else {echo $pds[$i]->description;}
+                    echo '</p>';
                     echo '</div></a></div>';
                     } else {echo '<div class="topGridi WH100 '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')"><a href="'.get_permalink($pds[$i]->id).'" class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);"><h1>SOLD</h1></a></div>';}
                     $a++;
@@ -95,5 +98,4 @@
         </div>
     </div>
 </section>
-<?php print_r($product);?>
 <?php get_footer();?>
