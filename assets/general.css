@@ -10,6 +10,7 @@
 body{
     font-family: 'Mukta' , fallback, Helvetica, sans-serif;
     margin:0;
+    width:100vw;
 }
 .trns1{
     transition:1s ease;
@@ -65,7 +66,7 @@ input[type=text]{
     left:0;
     z-index: -1;
     width:100vw;
-    height:100vh;
+    height:100%;
     background: linear-gradient(#EF887E,#e15369,#872d51,#9796CD ,#EF887E,#e15369,#872d51,#9796CD);
     background-size: 100% 400%;
     background-position-y: 0%;

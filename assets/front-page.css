@@ -161,6 +161,7 @@
 
     #GB{grid-column: 1/3; grid-row:4/5;}
 }
+/* Phone */
 @media screen and (max-width:600px){
     #topGrid{
         grid-template-columns: calc(100vw - 10px);
