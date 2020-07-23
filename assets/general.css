@@ -11,6 +11,7 @@ body{
     font-family: 'Mukta' , fallback, Helvetica, sans-serif;
     margin:0;
     width:100vw;
+    overflow-x: hidden;
 }
 .trns1{
     transition:1s ease;
@@ -79,7 +80,7 @@ input[type=text]{
 
 /* Header */
 header{
-    width:calc(100vw - 25px);
+    width:calc(100vw - 10px);
     padding: 10px 20px;
     background-color: var(--blk);
     display: flex;
@@ -87,6 +88,7 @@ header{
     align-items: center;
     margin: 5px 5px 0 5px;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 #mnSrch{
     display: flex;
@@ -163,4 +165,12 @@ header{
     50%{fill:#872d51}
     75%{fill:#9796CD}
     100%{fill:#EF887E}
+}
+/* Tablet */
+@media screen and (max-width:900px) and (min-width:601px){
+
+}
+/* Phone */
+@media screen and (max-width:600px){
+    header,#mnSrch,#mnSrch ul{justify-content: center;}
 }

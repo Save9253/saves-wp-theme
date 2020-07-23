@@ -2,14 +2,6 @@
 /**
  * The template for displaying product content in the single-product.php template
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-single-product.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
  * @version 3.6.0
@@ -32,77 +24,74 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="SnglPrdG" <?php wc_product_class( '', $product ); ?>>
-	<div class="Col1">
-		<div class="PrdImgs Gridi">
-			<?php
-			/**
-			 * Hook: woocommerce_before_single_product_summary.
-			 *
-			 * @hooked woocommerce_show_product_sale_flash - 10
-			 * @hooked woocommerce_show_product_images - 20
-			 */
-			do_action( 'woocommerce_before_single_product_summary' );
-			?>
-		</div>
+	<div class="PrdImgs Gridi">
 		<?php
 		/**
-		 * Hook: woocommerce_after_single_product_summary.
+		 * Hook: woocommerce_before_single_product_summary.
 		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
+		 * @hooked woocommerce_show_product_sale_flash - 10
+		 * @hooked woocommerce_show_product_images - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+		do_action( 'woocommerce_before_single_product_summary' );
 		?>
 	</div>
-	<div class="Col2">
-		<div class="Smr Gridi">
-			<?php
-			/**
-			 * woocommerce_before_main_content hook.
-			 *
-			 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-			 * @hooked woocommerce_breadcrumb - 20
-			 */
-			do_action( 'woocommerce_before_main_content' );
-
-			/**
-			 * Hook: woocommerce_single_product_summary.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked WC_Structured_Data::generate_product_data() - 60
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-
-			?>
-		</div>
+	<?php
+	/**
+	 * Hook: woocommerce_after_single_product_summary.
+	 *
+	 * @hooked woocommerce_output_product_data_tabs - 10
+	 * @hooked woocommerce_upsell_display - 15
+	 * @hooked woocommerce_output_related_products - 20
+	 */
+	do_action( 'woocommerce_after_single_product_summary' );
+	?>
+	<div class="Smr Gridi">
 		<?php
-			global $post;
+		/**
+		 * woocommerce_before_main_content hook.
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 */
+		do_action( 'woocommerce_before_main_content' );
 
-			$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+		/**
+		 * Hook: woocommerce_single_product_summary.
+		 *
+		 * @hooked woocommerce_template_single_title - 5
+		 * @hooked woocommerce_template_single_rating - 10
+		 * @hooked woocommerce_template_single_price - 10
+		 * @hooked woocommerce_template_single_excerpt - 20
+		 * @hooked woocommerce_template_single_add_to_cart - 30
+		 * @hooked woocommerce_template_single_meta - 40
+		 * @hooked woocommerce_template_single_sharing - 50
+		 * @hooked WC_Structured_Data::generate_product_data() - 60
+		 */
+		do_action( 'woocommerce_single_product_summary' );
 
-			if($product->stock_status == 'outofstock'){echo '</div>';}
-
-			if($short_description):
 		?>
-			<div class="lngDis Gridi">
-				<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
+	</div>
+	<?php
+		global $post;
 
-				if ( $heading ){
-					echo '<h2>'.esc_html( $heading ).'</h2>';
-				}
+		$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
-				the_content(); ?>
-			</div>
-		<?php endif;
-		if($product->stock_status == 'instock'){echo '</div>';}
-		?>
+		if($product->stock_status == 'outofstock'){echo '</div>';}
+
+		if($short_description):
+	?>
+		<div class="lngDis Gridi">
+			<?php $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
+
+			if ( $heading ){
+				echo '<h2>'.esc_html( $heading ).'</h2>';
+			}
+
+			the_content(); ?>
+		</div>
+	<?php endif;
+	if($product->stock_status == 'instock'){echo '</div>';}
+	?>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
