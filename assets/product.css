@@ -1,20 +1,18 @@
 /* Single Product */
 #SnglPrdG{
     display: grid;
-    width:calc(100vw - 5px);
+    width: calc(100% - 5px);
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto;
     color:white;
-    padding:5px;
-    grid-gap: 5px;
-    gap:5px;
+    padding:2.5px;
 }
 .Gridi{
     background-color: var(--blk);
     color:white;
     border-radius: 10px;
     display: flex;
-    width:100%;
+    margin:2.5px;
 }
 
 /* Product Images */
@@ -58,7 +56,6 @@
 .Smr{
     display:block;
     padding:20px;
-    margin-bottom: 0 !important;
     grid-column: 2/3;
     grid-row:1/2;
 }

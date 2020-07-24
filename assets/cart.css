@@ -1,0 +1,125 @@
+.woocommerce{
+    display:flex;
+    flex-wrap: wrap;
+}
+.Div{
+    margin-bottom: 5px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: var(--blk);
+    color:white;
+    flex: 1 1 auto;
+    margin: 2.5px;
+    display: grid;
+    place-content: center;
+}
+.product-remove{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.ShpTbl{
+    border-collapse: separate;
+}
+.ShpTbl td, .ShpTbl th{
+    border-top: solid 1px var(--orng) !important;
+    padding: 5px;
+}
+thead, .order-total{
+   text-align: left;
+   color:var(--orng);
+}
+.product-thumbnail img{
+    max-height:50px;
+    width:auto;
+    margin-top:10px;
+    border-radius: 5px;
+}
+.product-subtotal{
+    font-weight: bold;
+}
+.rmvLnk{
+    text-align: center;
+    border-radius: 100%;
+    color: var(--rd);
+    font-weight: 700;
+    display: block;
+    font-size: 1.5em;
+    height: 1em;
+    width: 1em;
+    background-color: transparent;
+    line-height: 1;
+    display: block;
+    transition: 500ms ease;
+}
+.rmvLnk:hover{
+    color: var(--blk);
+    background: var(--rd);
+}
+.product-quantity input{
+    border-radius:5px;
+    background-color: var(--rd);
+    color:white;
+    padding:5px;
+    border:none;
+}
+.UpdtBtn{
+    background-color: var(--orng);
+    color:var(--blk);
+}
+.UpdtBtn:hover{
+    background-color: var(--rd);
+}
+.ChOutBtn a{
+    background-color: var(--rd) !important;
+    transition: 500ms ease;
+    padding:20px !important;
+    border-radius:10px !important;
+}
+.ChOutBtn a:hover{
+    background-color: var(--orng) !important;
+}
+.CpnBtn{
+    background-color: var(--bl);
+    color:var(--blk);
+}
+.CpnBtn:hover{
+    background-color: white;
+}
+
+input::placeholder{
+    color:var(--blk);
+}
+#coupon_code{
+    color:var(--blk) !important;
+    background-color: var(--bl) !important;
+    border-radius: 10px;
+    padding:5px;
+    margin-right:10px;
+}
+.coupon{
+    margin:10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.actions{
+    padding:0;
+    text-align:end;
+}
+.coupon label{
+    color:var(--bl);
+    margin-right:10px;
+}
+.CrtTtl h2{
+    color:var(--rd);
+}
+.CrtTtl td,.CrtTtl th{
+    border-top: solid 1px var(--rd) !important;
+}
+
+/* Phone */
+@media screen and (max-width:600px){
+    .product-thumbnail a{
+        display:none;
+    }
+}

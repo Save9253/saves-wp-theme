@@ -54,8 +54,6 @@ if(Prds.length>l){
          },750);
         setTimeout(()=>{
             Prds[p].style.opacity = 1;
-            console.log('G='+g);
-            console.log('P='+p);
             g++;
             p++;
         },800);
