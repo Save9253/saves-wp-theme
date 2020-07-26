@@ -202,15 +202,28 @@ header h1{
     transition: 500ms ease;
 }
 .ErrMsg a:hover{background-color: var(--orng) !important;}
-.NotMsg{color:white;}
+.NotMsg,.woocommerce-info{
+    padding:10px 20px !important;
+    background-color: var(--blk) !important;
+    border-radius: 10px !important;
+    margin:2.5px !important;
+    border-top: unset !important;
+    color:white !important;
+    display:grid;
+    place-content: center;
+    flex:3 1 auto;
+}
+.woocommerce-info:before{
+    content:unset !important;
+}
 .Msg{
     padding:10px 20px;
     background-color: var(--blk);
     border-radius: 10px;
-    z-index: 999;
     margin:5px 5px 0;
     border-top: unset !important;
 }
+
 /* Tablet */
 @media screen and (max-width:900px) and (min-width:601px){
 

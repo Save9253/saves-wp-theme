@@ -13,6 +13,7 @@
     display: grid;
     place-content: center;
 }
+/* Cart Summary */
 .product-remove{
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -115,6 +116,18 @@ input::placeholder{
 }
 .CrtTtl td,.CrtTtl th{
     border-top: solid 1px var(--rd) !important;
+}
+
+/* Empty Cart */
+
+.RtrnBtn{
+    transition:500ms ease;
+    border:solid 3px var(--blk);
+    margin: 2.5px !important;
+    flex: 1 1 200px;
+}
+.RtrnBtn:hover{
+    background-color: var(--prpl);
 }
 
 /* Phone */
