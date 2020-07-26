@@ -1,0 +1,13 @@
+.CpnFrm{
+    border:unset !important;
+    color:var(--bl);
+}
+.CpnFrm p{
+    margin-block-start: 0;
+}
+.CpnFrm input{
+    border-radius: 5px;
+    padding:5px;
+    background-color: var(--bl);
+    color:var(--blk);
+}

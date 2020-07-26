@@ -24,6 +24,17 @@ p,h1{
     margin-block-end: 10px;
 }
 /* Divs */
+.Div{
+    padding:10px;
+    border-radius: 10px !important;
+    background-color: var(--blk);
+    color:white;
+    flex: 1 1 auto;
+    margin: 2.5px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .WH100{
     width:100%;
     height: 100%;
@@ -98,6 +109,7 @@ header{
     margin:2.5px;
     border-radius: 10px;
     flex-wrap: wrap;
+    width:calc(100% - 10px);
 }
 header h1{
     color:white;
@@ -181,6 +193,8 @@ header h1{
     75%{fill:#9796CD}
     100%{fill:#EF887E}
 }
+
+/* Messages */
 .SucsMsg{color:var(--orng) !important}
 .SucsMsg a{
     background-color: var(--orng) !important;
@@ -202,7 +216,15 @@ header h1{
     transition: 500ms ease;
 }
 .ErrMsg a:hover{background-color: var(--orng) !important;}
-.NotMsg,.woocommerce-info{
+.NotMsg{
+    color:white;
+    display: flex;
+}
+.NotMsg a{
+    color:var(--orng);
+    margin-left: 10px;
+}
+.woocommerce-info{
     padding:10px 20px !important;
     background-color: var(--blk) !important;
     border-radius: 10px !important;
@@ -220,8 +242,36 @@ header h1{
     padding:10px 20px;
     background-color: var(--blk);
     border-radius: 10px;
-    margin:5px 5px 0;
+    margin:2.5px;
     border-top: unset !important;
+}
+/* Buttons */
+.OrngBtn{
+    background-color: var(--orng);
+    color:var(--blk);
+}
+.OrngBtn:hover{
+    background-color: var(--rd);
+}
+.RdBtn a{
+    background-color: var(--rd) !important;
+    transition: 500ms ease;
+    padding:20px !important;
+    border-radius:10px !important;
+}
+.RdBtn a:hover{
+    background-color: var(--orng) !important;
+}
+.BlBtn{
+    background-color: var(--bl);
+    color:var(--blk);
+}
+.BlBtn:hover{
+    background-color: white;
+}
+/* Input */
+input::placeholder{
+    color:var(--blk);
 }
 
 /* Tablet */

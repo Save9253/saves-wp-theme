@@ -2,17 +2,7 @@
     display:flex;
     flex-wrap: wrap;
 }
-.Div{
-    margin-bottom: 5px;
-    padding:10px;
-    border-radius: 10px;
-    background-color: var(--blk);
-    color:white;
-    flex: 1 1 auto;
-    margin: 2.5px;
-    display: grid;
-    place-content: center;
-}
+
 /* Cart Summary */
 .product-remove{
     padding-left: 0 !important;
@@ -63,33 +53,7 @@ thead, .order-total{
     padding:5px;
     border:none;
 }
-.UpdtBtn{
-    background-color: var(--orng);
-    color:var(--blk);
-}
-.UpdtBtn:hover{
-    background-color: var(--rd);
-}
-.ChOutBtn a{
-    background-color: var(--rd) !important;
-    transition: 500ms ease;
-    padding:20px !important;
-    border-radius:10px !important;
-}
-.ChOutBtn a:hover{
-    background-color: var(--orng) !important;
-}
-.CpnBtn{
-    background-color: var(--bl);
-    color:var(--blk);
-}
-.CpnBtn:hover{
-    background-color: white;
-}
 
-input::placeholder{
-    color:var(--blk);
-}
 #coupon_code{
     color:var(--blk) !important;
     background-color: var(--bl) !important;
