@@ -1,3 +1,4 @@
+/* Coupon Form */
 .CpnFrm{
     border:unset !important;
     color:var(--bl);
@@ -10,4 +11,72 @@
     padding:5px;
     background-color: var(--bl);
     color:var(--blk);
+}
+/* Check out form */
+.ChkOutFrm{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/* Customer Information Form */
+.CstmInf{flex-direction: column;}
+.CstmInf Div{width: calc(100% - 20px);}
+.CstmInf p{color:var(--orng)}
+.CstmInf input,.CstmInf textarea{
+    background-color: var(--orng) !important;
+    color:var(--blk) !important;
+    border-radius: 5px !important;
+    padding:5px 10px !important;
+    border:unset !important;
+}
+.select2-selection__rendered,.select2-selection.select2-container,.select2-dropdown{
+    background-color: var(--orng) !important;
+    color:var(--blk) !important;
+    border-radius: 5px !important;
+    border:unset !important;
+}
+.required{
+    color:var(--rd) !important;
+}
+textarea::placeholder{
+    color:var(--blk);
+}
+.select2-search input{
+    border:unset !important;
+}
+.select2-results__option--highlighted{
+    background-color: var(--bl) !important;
+}
+.select2-container--default .select2-selection--single{
+    border:unset !important;
+    border-radius: 5px;
+}
+.select2-selection__arrow b{
+    border-color:var(--blk) transparent transparent transparent !important;
+}
+/* Order review */
+.OrdRvw {flex-direction: column;}
+.OrdRvw table{width:unset !important;}
+.cart-subtotal{color:var(--orng) !important;}
+.order-total{color:var(--rd) !important; font-weight: bold !important;}
+.OrdRvw td,.OrdRvw th {
+    border-top: solid 1px var(--orng) !important;
+    padding:5px !important;
+}
+.cart_item{
+    color:var(--bl) !important;
+}
+.OrdRvw thead th{
+    font-weight: normal !important;
+    padding:5px !important;
+}
+#payment{
+    background-color: var(--prpl) !important;
+}
+#payment .Btn{margin-top: 5px;}
+.payment_methods{
+    border-bottom: solid 1px var(--blk) !important;
+}
+/* Phone */
+@media screen and (max-width:600px){
+    .ChkOutFrm{display: block;}
 }
