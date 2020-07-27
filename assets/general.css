@@ -67,6 +67,7 @@ button{
 a{
     text-decoration: none;
     color:unset;
+    transition: 500ms ease;
 }
 p{
     margin-block-start: 10px;
@@ -98,6 +99,10 @@ input[type=text]{
     0%{background-position-y: 0%;}
     100%{background-position-y: 75%;}
 }
+
+.orng{color:var(--orng);}
+.bl{color:var(--bl);}
+.whtHvr:hover{color:white;}
 
 /* Header */
 header{
@@ -272,6 +277,9 @@ header h1{
 /* Input */
 input::placeholder{
     color:var(--blk);
+}
+.required{
+    color:var(--rd) !important;
 }
 
 /* Tablet */

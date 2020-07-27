@@ -9,6 +9,7 @@
         if(is_archive()){wp_enqueue_style('archive-CSS','/wp-content/themes/saves-wp-theme/assets/archive.css',array(),NULL,'all');};
         if(is_page('Cart')){wp_enqueue_style('cart-CSS','/wp-content/themes/saves-wp-theme/assets/cart.css',array(),NULL,'all');};
         if(is_page('Checkout')){wp_enqueue_style('checkout-CSS','/wp-content/themes/saves-wp-theme/assets/checkout.css',array(),NULL,'all');};
+        if(is_page('my-account')){wp_enqueue_style('my-account-CSS','/wp-content/themes/saves-wp-theme/assets/my-account.css',array(),NULL,'all');};
     };
     add_action('wp_enqueue_scripts','load_scripts');
 

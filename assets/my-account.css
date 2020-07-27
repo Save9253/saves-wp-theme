@@ -1,0 +1,31 @@
+.LgnFrm{
+    flex-direction:column;
+    width: 300px;
+    padding:20px !important;
+}
+.LgnFrm p{
+    width:100%;
+}
+.woocommerce{
+    display: grid;
+    place-content: center;
+    height:80vh;
+}
+.sbmP{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.LgnFrm input{
+    background-color: var(--orng);
+    color:var(--blk) ;
+    border-radius: 5px ;
+    padding:5px 10px ;
+    border:unset ;
+    width:100%;
+    line-height: 1.2em;
+}
+
+#rememberme{
+    width:auto;
+}

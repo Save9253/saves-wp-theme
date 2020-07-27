@@ -34,9 +34,6 @@
     border-radius: 5px !important;
     border:unset !important;
 }
-.required{
-    color:var(--rd) !important;
-}
 textarea::placeholder{
     color:var(--blk);
 }
