@@ -28,28 +28,7 @@
     padding:5px 10px !important;
     border:unset !important;
 }
-.select2-selection__rendered,.select2-selection.select2-container,.select2-dropdown{
-    background-color: var(--orng) !important;
-    color:var(--blk) !important;
-    border-radius: 5px !important;
-    border:unset !important;
-}
-textarea::placeholder{
-    color:var(--blk);
-}
-.select2-search input{
-    border:unset !important;
-}
-.select2-results__option--highlighted{
-    background-color: var(--bl) !important;
-}
-.select2-container--default .select2-selection--single{
-    border:unset !important;
-    border-radius: 5px;
-}
-.select2-selection__arrow b{
-    border-color:var(--blk) transparent transparent transparent !important;
-}
+
 /* Order review */
 .OrdRvw {flex-direction: column;}
 .OrdRvw table{width:unset !important;}

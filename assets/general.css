@@ -25,7 +25,7 @@ p,h1{
 }
 /* Divs */
 .Div{
-    padding:10px;
+    padding:20px;
     border-radius: 10px !important;
     background-color: var(--blk);
     color:white;
@@ -253,7 +253,7 @@ header h1{
 /* Buttons */
 .OrngBtn{
     background-color: var(--orng);
-    color:var(--blk);
+    color:var(--blk) !important;
 }
 .OrngBtn:hover{
     background-color: var(--rd);
@@ -282,6 +282,32 @@ input::placeholder{
     color:var(--rd) !important;
 }
 
+/* Forms */
+.woocommerce input{
+    background-color: var(--orng);
+    color:var(--blk) ;
+    border-radius: 5px ;
+    padding:5px 10px ;
+    border:unset ;
+    width:100%;
+    line-height: 1.2em;
+}
+.woocommerce label{color:var(--orng);}
+.select2-selection__rendered,.select2-selection.select2-container,.select2-dropdown{
+    background-color: var(--orng) !important;
+    color:var(--blk) !important;
+    border-radius: 5px !important;
+    border:unset !important;
+}
+textarea::placeholder{color:var(--blk);}
+.select2-search input{border:unset !important;}
+.select2-results__option--highlighted{background-color: var(--bl) !important;}
+.select2-container--default .select2-selection--single{
+    border:unset !important;
+    border-radius: 5px;
+}
+.select2-selection__arrow b{border-color:var(--blk) transparent transparent transparent !important;}
+.woocommerce fieldset{border:solid 1px var(--orng); border-radius: 10px;}
 /* Tablet */
 @media screen and (max-width:900px) and (min-width:601px){
 
