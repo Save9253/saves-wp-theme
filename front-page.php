@@ -44,7 +44,6 @@
                     } else {echo '<div class="topGridi '.$cl.'" style="background-image:url('.wp_get_attachment_url($pds[$i]->image_id).')"><a href="'.get_permalink($pds[$i]->id).'" class="GiCont WH100" style="background-color: rgba(21,18,11,0.5);"><h1>SOLD</h1></a></div>';}
                     $a++;
                 };
-                if($pds[$i]->catalog_visibility == 'hidden'){$c--;}
                 if($i < $pdsC-1){$i++;} else {$i = 0;};
             };
             for($i = 1;$i <= 6;$i++){

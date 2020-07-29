@@ -1,7 +1,7 @@
 /* Single Product */
 #SnglPrdG{
     display: grid;
-    width: calc(100% - 5px);
+    width: 100%;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto;
     color:white;

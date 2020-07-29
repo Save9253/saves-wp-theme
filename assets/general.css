@@ -10,9 +10,8 @@
 body{
     font-family: 'Mukta' , fallback, Helvetica, sans-serif;
     margin:0;
-    width:100vw;
-    overflow-x: hidden;
-    padding:2.5px 10px;
+
+    padding:2.5px;
 }
 .trns1{
     transition:1s ease;
@@ -114,7 +113,7 @@ header{
     margin:2.5px;
     border-radius: 10px;
     flex-wrap: wrap;
-    width:calc(100% - 10px);
+
 }
 header h1{
     color:white;

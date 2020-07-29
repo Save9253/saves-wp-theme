@@ -4,8 +4,6 @@ const srchFld = document.querySelector('#s');
 const GH = document.querySelector('#GH');
 let GHw = "200";
 
-//if(GH != null){GHw = GH.clientWidth - 70;}
-
 srchBtn.addEventListener('click',() => {
     if(srchFld.value == ""){
         if(srchFld.style.width == "0px"){
