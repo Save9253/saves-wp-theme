@@ -4,6 +4,7 @@
     if ( have_posts() ) :
         while ( have_posts() ) : the_post();
             echo '<div class="Div SrchRslt">';
+            echo '<a href="'.get_permalink().'">';
             echo '<h2>';
             echo the_title();
             echo '</h2>';
@@ -16,6 +17,7 @@
                 if(strlen(get_post()->post_content)>150){echo '...';}
             };
             echo '</p>';
+            echo '</a>';
             echo '</div>';
         endwhile;
     endif;
