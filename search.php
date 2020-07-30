@@ -20,6 +20,8 @@
             echo '</a>';
             echo '</div>';
         endwhile;
+    else:
+        echo '<h1 style="text-align: center;width: 100%;">No results found!</h1>';
     endif;
     echo '</section>';
     get_footer();

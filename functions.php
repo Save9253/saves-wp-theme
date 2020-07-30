@@ -11,6 +11,7 @@
         if(is_page('Checkout')){wp_enqueue_style('checkout-CSS','/wp-content/themes/saves-wp-theme/assets/checkout.css',array(),NULL,'all');};
         if(is_page('my-account')){wp_enqueue_style('my-account-CSS','/wp-content/themes/saves-wp-theme/assets/my-account.css',array(),NULL,'all');};
         if(is_search()){wp_enqueue_style('search-CSS','/wp-content/themes/saves-wp-theme/assets/search.css',array(),NULL,'all');};
+        if(is_404()){wp_enqueue_style('404-CSS','/wp-content/themes/saves-wp-theme/assets/404.css',array(),NULL,'all');};
     };
     add_action('wp_enqueue_scripts','load_scripts');
 

@@ -1,0 +1,16 @@
+#Sec404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#Sec404 h1{
+    font-size: 100px;
+    font-weight: bold;
+}
+#Sec404 h3,#Srch404 p{
+    margin-bottom: 20px;
+}
+#Srch404{
+    flex-direction: column;
+}
